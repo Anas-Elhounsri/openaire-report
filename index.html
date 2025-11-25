@@ -1,0 +1,382 @@
+<!-- Claude was used to assist with loading the data -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAIRE SoMEF Status Report</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 40px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .chart-container {
+            margin: 30px 0;
+            max-width: 800px;
+        }
+
+        .stats {
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>OpenAIRE SoMEF Status Report</h1>
+
+    <div class="stats">
+        <p><strong>Current number of repositories analyzed:</strong> 40,982</p>
+        <p><strong>Duplicates found:</strong> 0</p>
+        <p><strong>codemeta.json files found:</strong> 54</p>
+    </div>
+
+    <h2>Research Questions</h2>
+    <ul>
+        <li><strong>RQ1:</strong> How do communities describe Research Software metadata in their code repositories?</li>
+        <li><strong>RQ2:</strong> What is the adoption of archival infrastructures across disciplines?</li>
+        <li><strong>RQ3:</strong> How do software projects adopt versioning?</li>
+        <li><strong>RQ4:</strong> How comprehensive is the metadata provided in code repositories? Specifically:
+            <ul>
+                <li>What is the adoption of open licenses?</li>
+                <li>Do research projects include a description?</li>
+                <li>How well documented are research projects? (i.e., in terms of installation instructions, requirements, and documentation availability)</li>
+            </ul>
+        </li>
+        <li><strong>RQ5:</strong> What are the most common citation practices among communities?</li>
+    </ul>
+
+    <h2>RQ1: How do communities describe Research Software metadata in their code repositories?</h2>
+
+    <h3>Metadata File Presence</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Metadata File</th>
+                <th>Presence (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>README</td>
+                <td>88.6%</td>
+            </tr>
+            <tr>
+                <td>LICENSE</td>
+                <td>55%</td>
+            </tr>
+            <tr>
+                <td>Package Files</td>
+                <td>29.47%</td>
+            </tr>
+            <tr>
+                <td>Zenodo DOI</td>
+                <td>2.8%</td>
+            </tr>
+            <tr>
+                <td>CONTRIBUTORS</td>
+                <td>1.77%</td>
+            </tr>
+            <tr>
+                <td>CFF File</td>
+                <td>1.63%</td>
+            </tr>
+            <tr>
+                <td>AUTHORS</td>
+                <td>1.5%</td>
+            </tr>
+            <tr>
+                <td>codemeta.json</td>
+                <td>0.13%</td>
+            </tr>
+            <tr>
+                <td>NONE</td>
+                <td>8.41%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Metadata File Definitions</h3>
+
+    <p><strong>Citation File Format (CFF):</strong> Metadata file containing human and machine-readable citation metadata for research software. CFF is serialized in YAML, and includes fields for tracking license, title and url of a code deposit among others.</p>
+
+    <p><strong>README:</strong> Human-readable files, usually written in Markdown, with a brief description of the code repository or tool. READMEs usually contain a wide range of metadata attributes, including description, title, license, citation or installation instructions among other categories.</p>
+
+    <p><strong>Package Files:</strong> Metadata files specific to programming languages (e.g., setup.py in Python, pom.xml in Java, etc.). These files are machine-readable.</p>
+
+    <p><strong>AUTHORS:</strong> A file for listing individuals or groups who contributed to the project, usually includes their names and optionally their roles.</p>
+
+    <p><strong>CONTRIBUTORS:</strong> A file that details contributions of people involved in the project, often used with AUTHORS.</p>
+
+    <p><strong>LICENSE:</strong> File specifying the license used in a code repository.</p>
+
+    <p><strong>codemeta.json:</strong> JSON-LD file that contains structured metadata about the software, to facilitate discovery and citation.</p>
+
+    <p><strong>ZENODO DOI:</strong> Digital Object Identifier from Zenodo archival system.</p>
+
+    <p><strong>NONE:</strong> None of the metadata files above are used in the code repository.</p>
+
+    <h2>RQ2: What is the adoption of archival infrastructures across disciplines?</h2>
+    <p><em>[IN PROGRESS, NEED TO SETUP A NEW SWH TOKEN]</em></p>
+
+    <h2>RQ3: How do software projects adopt versioning?</h2>
+    <p>We observed whether software projects had code releases and consistent versioning naming scheme (i.e., all releases follow the same conventions) to provide a comprehensive understanding of versioning practices and how well are they documented.</p>
+
+    <h3>RQ3-1: Releases and Consistency</h3>
+    <div class="chart-container">
+        <canvas id="rq3_1Chart"></canvas>
+    </div>
+
+    <h3>RQ3-2: Versioning Schemes</h3>
+    <p><strong>Semantic versioning:</strong> The project uses releases following the "X.Y.Z" notation, where X stands for major changes, Y for minor changes and Z for patches.</p>
+    <p><strong>Calendar versioning:</strong> The project uses the current date to tag their releases.</p>
+    <p><strong>Alphanumeric:</strong> The project combines numbers and characters in the release.</p>
+
+    <div class="chart-container">
+        <canvas id="rq3_2Chart"></canvas>
+    </div>
+
+    <h2>RQ4: How comprehensive is the metadata provided in code repositories?</h2>
+
+    <h3>RQ4-1: Project Description</h3>
+    <p>We assess if software projects have a "short description", (i.e., a one line summary of the project), or a longer description. The short description is provided by GitHub API, and the longer description is extracted with SoMEF from the README.md file. We aim to capture the depth and accessibility of project descriptions across platforms.</p>
+
+    <div class="chart-container">
+        <canvas id="rq4_1Chart"></canvas>
+    </div>
+
+    <h3>RQ4-2: License</h3>
+    <p>We assess whether:</p>
+    <ul>
+        <li>A license is declared</li>
+        <li>Whether that license follows the SPDX conventions (i.e., it is a known license). This allows us to quantify the degree to which communities follow recognized norms for software licensing, essential for compliance and interoperability.</li>
+    </ul>
+
+    <div class="chart-container">
+        <canvas id="rq4_2Chart"></canvas>
+    </div>
+
+    <h3>RQ4-3: Installation Instructions</h3>
+    <p>We assess whether installation instructions, covering installation steps, requirements, and documentation, are included in a code repository. We use SoMEF for the extraction, which looks into specific headers of the README files mentioning installation instructions, and links to external documentation (readthedocs, wiki setup).</p>
+    <p>In addition, we look for specific files describing requirements such as 'requirements.txt' in Python, 'pom.xml' in Java, etc.</p>
+    <p>Collectively, these attributes reveal how communities approach metadata and reflect their commitment to accessibility, traceability, and best practices in software metadata management.</p>
+
+    <div class="chart-container">
+        <canvas id="rq4_3Chart"></canvas>
+    </div>
+
+    <h2>RQ5: What are the most common citation practices among communities?</h2>
+
+    <p><strong>BibTeX file:</strong> A BibTeX file (e.g., CITATION.bib) is available in the repository. BibTeX is a popular reference management tool, used with LaTeX to format bibliographies. ".bib" files are plain text files containing bibliographic information structured in a specific format.</p>
+
+    <p><strong>Citation File Format file (CFF):</strong> A Citation File Format file (CFF) is available in the repository. CFF files are a good practice that has recently seen uptake from the scientific community, receiving support from platforms such as GitHub.</p>
+
+    <p><strong>README contains a citation:</strong> Alternatively, we assess if the README file contains a citation (i.e., by retrieving BibTeX code in it), since many authors choose to suggest others how to cite their software directly with a BibTeX entry. The presence of citation details in README.md files represents a less formalized method of citation, but still widely used.</p>
+
+    <div class="chart-container">
+        <canvas id="rq5Chart"></canvas>
+    </div>
+
+    <script>
+        // Color scheme
+        const COLORS = ['#003f5c', '#7a5195', '#ef5675', '#ffa600'];
+
+        // Store chart instances
+        let charts = {};
+
+        // Function to create chart with histogram style
+        function createChart(canvasId, labels, values, title) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+
+            // Destroy existing chart if it exists
+            if (charts[canvasId]) {
+                charts[canvasId].destroy();
+            }
+
+            // Assign colors to bars
+            const backgroundColors = labels.map((_, index) => COLORS[index % COLORS.length]);
+
+            charts[canvasId] = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Percentage (%)',
+                        data: values,
+                        backgroundColor: backgroundColors,
+                        borderColor: backgroundColors.map(color => color),
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: title,
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            }
+                        },
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Percentage (%)',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                }
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Categories',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load and process RQ3 data
+        async function loadRQ3Data() {
+            try {
+                const response = await fetch('data/rq3_results_46779.json');
+                const data = await response.json();
+                const rq3Data = data['46779'];
+
+                // RQ3-1: Releases and Consistency
+                const rq3_1 = rq3Data['rq3-1'];
+                const labels_1 = Object.keys(rq3_1);
+                const values_1 = Object.values(rq3_1);
+                createChart('rq3_1Chart', labels_1, values_1, 'RQ3-1: Releases and Consistency');
+
+                // RQ3-2: Version Schemes
+                const rq3_2 = rq3Data['rq3-2'];
+                const labels_2 = Object.keys(rq3_2);
+                const values_2 = Object.values(rq3_2);
+                createChart('rq3_2Chart', labels_2, values_2, 'RQ3-2: Version Schemes');
+            } catch (error) {
+                console.error('Error loading RQ3 data:', error);
+            }
+        }
+
+        // Load and process RQ4 data
+        async function loadRQ4Data() {
+            try {
+                const response = await fetch('data/rq4_results_46779.json');
+                const data = await response.json();
+                const rq4Data = data['46779'];
+
+                // RQ4-1: Description Types
+                const rq4_1 = rq4Data['rq4-1'];
+                const labels_1 = Object.keys(rq4_1);
+                const values_1 = Object.values(rq4_1);
+                createChart('rq4_1Chart', labels_1, values_1, 'RQ4-1: Project Description');
+
+                // RQ4-2: License Types
+                const rq4_2 = rq4Data['rq4-2'];
+                const labels_2 = Object.keys(rq4_2);
+                const values_2 = Object.values(rq4_2);
+                createChart('rq4_2Chart', labels_2, values_2, 'RQ4-2: License Adoption');
+
+                // RQ4-3: Documentation Types
+                const rq4_3 = rq4Data['rq4-3'];
+                const labels_3 = Object.keys(rq4_3);
+                const values_3 = Object.values(rq4_3);
+                createChart('rq4_3Chart', labels_3, values_3, 'RQ4-3: Installation Instructions');
+            } catch (error) {
+                console.error('Error loading RQ4 data:', error);
+            }
+        }
+
+        // Load and process RQ5 data
+        async function loadRQ5Data() {
+            try {
+                const response = await fetch('data/rq5_results_46779.json');
+                const data = await response.json();
+                const rq5Data = data['46779'];
+
+                const labels = Object.keys(rq5Data);
+                const values = Object.values(rq5Data);
+                createChart('rq5Chart', labels, values, 'RQ5: Citation Practices');
+            } catch (error) {
+                console.error('Error loading RQ5 data:', error);
+            }
+        }
+
+        // Load all data when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            loadRQ3Data();
+            loadRQ4Data();
+            loadRQ5Data();
+        });
+    </script>
+</body>
+</html>
