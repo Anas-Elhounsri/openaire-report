@@ -1,11 +1,12 @@
-<!-- Claude was used to assist with loading the data -->
+<!-- CLAUDE WAS USED TO HELP WITH JS PART OF THE PROJECT-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAIRE SoMEF Status Report</title>
+    <title>OpenAIRE SoMEF Status Report - Sunburst View</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -83,16 +84,15 @@
     <h2>Research Questions</h2>
     <ul>
         <li><strong>RQ1:</strong> How do communities describe Research Software metadata in their code repositories?</li>
-        <li><strong>RQ2:</strong> What is the adoption of archival infrastructures across disciplines?</li>
-        <li><strong>RQ3:</strong> How do software projects adopt versioning?</li>
-        <li><strong>RQ4:</strong> How comprehensive is the metadata provided in code repositories? Specifically:
+        <li><strong>RQ2:</strong> How do software projects adopt versioning?</li>
+        <li><strong>RQ3:</strong> How comprehensive is the metadata provided in code repositories? Specifically:
             <ul>
                 <li>What is the adoption of open licenses?</li>
                 <li>Do research projects include a description?</li>
                 <li>How well documented are research projects? (i.e., in terms of installation instructions, requirements, and documentation availability)</li>
             </ul>
         </li>
-        <li><strong>RQ5:</strong> What are the most common citation practices among communities?</li>
+        <li><strong>RQ4:</strong> What are the most common citation practices among communities?</li>
     </ul>
 
     <h2>RQ1: How do communities describe Research Software metadata in their code repositories?</h2>
@@ -165,18 +165,15 @@
 
     <p><strong>NONE:</strong> None of the metadata files above are used in the code repository.</p>
 
-    <h2>RQ2: What is the adoption of archival infrastructures across disciplines?</h2>
-    <p><em>[IN PROGRESS, NEED TO SETUP A NEW SWH TOKEN]</em></p>
-
-    <h2>RQ3: How do software projects adopt versioning?</h2>
+    <h2>RQ2: How do software projects adopt versioning?</h2>
     <p>We observed whether software projects had code releases and consistent versioning naming scheme (i.e., all releases follow the same conventions) to provide a comprehensive understanding of versioning practices and how well are they documented.</p>
 
-    <h3>RQ3-1: Releases and Consistency</h3>
+    <h3>RQ2-1: Releases and Consistency</h3>
     <div class="chart-container">
         <canvas id="rq3_1Chart"></canvas>
     </div>
 
-    <h3>RQ3-2: Versioning Schemes</h3>
+    <h3>RQ2-2: Versioning Schemes</h3>
     <p><strong>Semantic versioning:</strong> The project uses releases following the "X.Y.Z" notation, where X stands for major changes, Y for minor changes and Z for patches.</p>
     <p><strong>Calendar versioning:</strong> The project uses the current date to tag their releases.</p>
     <p><strong>Alphanumeric:</strong> The project combines numbers and characters in the release.</p>
@@ -185,16 +182,16 @@
         <canvas id="rq3_2Chart"></canvas>
     </div>
 
-    <h2>RQ4: How comprehensive is the metadata provided in code repositories?</h2>
+    <h2>RQ3: How comprehensive is the metadata provided in code repositories?</h2>
 
-    <h3>RQ4-1: Project Description</h3>
+    <h3>RQ3-1: Project Description</h3>
     <p>We assess if software projects have a "short description", (i.e., a one line summary of the project), or a longer description. The short description is provided by GitHub API, and the longer description is extracted with SoMEF from the README.md file. We aim to capture the depth and accessibility of project descriptions across platforms.</p>
 
     <div class="chart-container">
         <canvas id="rq4_1Chart"></canvas>
     </div>
 
-    <h3>RQ4-2: License</h3>
+    <h3>RQ3-2: License</h3>
     <p>We assess whether:</p>
     <ul>
         <li>A license is declared</li>
@@ -205,7 +202,7 @@
         <canvas id="rq4_2Chart"></canvas>
     </div>
 
-    <h3>RQ4-3: Installation Instructions</h3>
+    <h3>RQ3-3: Installation Instructions</h3>
     <p>We assess whether installation instructions, covering installation steps, requirements, and documentation, are included in a code repository. We use SoMEF for the extraction, which looks into specific headers of the README files mentioning installation instructions, and links to external documentation (readthedocs, wiki setup).</p>
     <p>In addition, we look for specific files describing requirements such as 'requirements.txt' in Python, 'pom.xml' in Java, etc.</p>
     <p>Collectively, these attributes reveal how communities approach metadata and reflect their commitment to accessibility, traceability, and best practices in software metadata management.</p>
@@ -214,7 +211,7 @@
         <canvas id="rq4_3Chart"></canvas>
     </div>
 
-    <h2>RQ5: What are the most common citation practices among communities?</h2>
+    <h2>RQ4: What are the most common citation practices among communities?</h2>
 
     <p><strong>BibTeX file:</strong> A BibTeX file (e.g., CITATION.bib) is available in the repository. BibTeX is a popular reference management tool, used with LaTeX to format bibliographies. ".bib" files are plain text files containing bibliographic information structured in a specific format.</p>
 
@@ -226,23 +223,87 @@
         <canvas id="rq5Chart"></canvas>
     </div>
 
-    <script>
-        // Color scheme
-        const COLORS = ['#003f5c', '#7a5195', '#ef5675', '#ffa600'];
+    <h2>Metadata Sources Distribution</h2>
+        <p>SoMEF extracts metadata from various sources across repositories. These visualizations show the distribution of sources grouped into three categories: Package Files (language-specific metadata files), Documentation & User Guidance Sources (human-readable documentation),
+            and Other Sources (API data, file exploration, and automated analysis). The grand total from 34 unique sources is: 830510 </p>
 
-        // Store chart instances
+        <h3>Package Files Sources</h3>
+        <p>Package files are language-specific metadata files that contain structured information about software dependencies, versions, and configurations. These files are typically machine-readable and follow specific formats for different programming ecosystems.</p>
+        <div class="chart-container">
+            <canvas id="packageFilesChart"></canvas>
+        </div>
+
+        <h3>Documentation & User Guidance Sources</h3>
+        <p>These sources include human-readable files that provide documentation, guidance, and information about the project. They are essential for understanding how to use, cite, and contribute to the software.</p>
+        <table id="documentationSourcesTable">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Count</th>
+                    <th>Percentage of Total Sources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated by JavaScript -->
+            </tbody>
+        </table>
+
+        <h3>Other Sources</h3>
+        <p>This category includes data extracted from the GitHub API, automated file exploration, machine learning classification, and other specialized sources. These provide comprehensive metadata coverage beyond traditional documentation files.</p>
+        <table id="otherSourcesTable">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Count</th>
+                    <th>Percentage of Total Sources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated by JavaScript -->
+            </tbody>
+        </table>
+
+    <h2>Metadata Fields by Category - Treemap Visualization</h2>
+    <p>This treemap shows the hierarchical distribution of metadata fields extracted by SoMEF across major categories. Each colored block represents a macro category, with nested rectangles showing subcategories and individual fields. Larger rectangles indicate higher repository counts. Hover to see details.</p>
+
+    <div id="treemapLegend" style="text-align: center; margin: 20px 0;">
+        <div style="display: inline-block; margin: 0 15px;">
+            <span style="display: inline-block; width: 20px; height: 20px; background-color: #003f5c; vertical-align: middle;"></span>
+            Repository Information
+        </div>
+        <div style="display: inline-block; margin: 0 15px;">
+            <span style="display: inline-block; width: 20px; height: 20px; background-color: #7a5195; vertical-align: middle;"></span>
+            Software Description & Semantics
+        </div>
+        <div style="display: inline-block; margin: 0 15px;">
+            <span style="display: inline-block; width: 20px; height: 20px; background-color: #ef5675; vertical-align: middle;"></span>
+            Packaging Build & Release
+        </div>
+        <div style="display: inline-block; margin: 0 15px;">
+            <span style="display: inline-block; width: 20px; height: 20px; background-color: #ffa600; vertical-align: middle;"></span>
+            Documentation & User Guidance
+        </div>
+    </div>
+
+
+    <div id="treemap" style="width: 100%; height: 800px; margin: 30px 0;"></div>
+
+    <div class="tooltip" id="tooltip" style="position: absolute; opacity: 0; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; pointer-events: none; font-size: 12px; z-index: 1000;"></div>
+
+    <script>
+
+        const COLORS = ['#003f5c', '#7a5195', '#ef5675', '#ffa600', '#2f4b7c', '#fff1b7', '#de425b', '#ea6b5b',
+        '#f6b276', '#fad293', '#abc78c', '#509d73'];
+
         let charts = {};
 
-        // Function to create chart with histogram style
         function createChart(canvasId, labels, values, title) {
             const ctx = document.getElementById(canvasId).getContext('2d');
 
-            // Destroy existing chart if it exists
             if (charts[canvasId]) {
                 charts[canvasId].destroy();
             }
 
-            // Assign colors to bars
             const backgroundColors = labels.map((_, index) => COLORS[index % COLORS.length]);
 
             charts[canvasId] = new Chart(ctx, {
@@ -312,17 +373,15 @@
                 const data = await response.json();
                 const rq3Data = data['46779'];
 
-                // RQ3-1: Releases and Consistency
                 const rq3_1 = rq3Data['rq3-1'];
                 const labels_1 = Object.keys(rq3_1);
                 const values_1 = Object.values(rq3_1);
-                createChart('rq3_1Chart', labels_1, values_1, 'RQ3-1: Releases and Consistency');
+                createChart('rq3_1Chart', labels_1, values_1, 'RQ2-1: Releases and Consistency');
 
-                // RQ3-2: Version Schemes
                 const rq3_2 = rq3Data['rq3-2'];
                 const labels_2 = Object.keys(rq3_2);
                 const values_2 = Object.values(rq3_2);
-                createChart('rq3_2Chart', labels_2, values_2, 'RQ3-2: Version Schemes');
+                createChart('rq3_2Chart', labels_2, values_2, 'RQ2-2: Version Schemes');
             } catch (error) {
                 console.error('Error loading RQ3 data:', error);
             }
@@ -335,49 +394,453 @@
                 const data = await response.json();
                 const rq4Data = data['46779'];
 
-                // RQ4-1: Description Types
                 const rq4_1 = rq4Data['rq4-1'];
                 const labels_1 = Object.keys(rq4_1);
                 const values_1 = Object.values(rq4_1);
-                createChart('rq4_1Chart', labels_1, values_1, 'RQ4-1: Project Description');
+                createChart('rq4_1Chart', labels_1, values_1, 'RQ3-1: Project Description');
 
-                // RQ4-2: License Types
                 const rq4_2 = rq4Data['rq4-2'];
                 const labels_2 = Object.keys(rq4_2);
                 const values_2 = Object.values(rq4_2);
-                createChart('rq4_2Chart', labels_2, values_2, 'RQ4-2: License Adoption');
+                createChart('rq4_2Chart', labels_2, values_2, 'RQ3-2: License Adoption');
 
-                // RQ4-3: Documentation Types
                 const rq4_3 = rq4Data['rq4-3'];
                 const labels_3 = Object.keys(rq4_3);
                 const values_3 = Object.values(rq4_3);
-                createChart('rq4_3Chart', labels_3, values_3, 'RQ4-3: Installation Instructions');
+                createChart('rq4_3Chart', labels_3, values_3, 'RQ3-3: Installation Instructions');
             } catch (error) {
                 console.error('Error loading RQ4 data:', error);
             }
         }
 
-        // Load and process RQ5 data
-        async function loadRQ5Data() {
-            try {
-                const response = await fetch('data/rq5_results.json');
-                const data = await response.json();
-                const rq5Data = data['46779'];
+                    // Load and process RQ5 data
+            async function loadRQ5Data() {
+                try {
+                    const response = await fetch('data/rq5_results.json');
+                    const data = await response.json();
+                    const rq5Data = data['46779'];
 
-                const labels = Object.keys(rq5Data);
-                const values = Object.values(rq5Data);
-                createChart('rq5Chart', labels, values, 'RQ5: Citation Practices');
+                    const labels = Object.keys(rq5Data);
+                    const values = Object.values(rq5Data);
+                    createChart('rq5Chart', labels, values, 'RQ4: Citation Practices');
+                } catch (error) {
+                    console.error('Error loading RQ5 data:', error);
+                }
+            }
+
+            // Load and process sources data
+            async function loadSourcesData() {
+                try {
+                    const response = await fetch('data/sources_total.json');
+                    const data = await response.json();
+                    const grandTotal = data.grand_total;
+
+                    // Package Files - Keep as chart
+                    const packageFiles = data.sources["Package Files"];
+                    const packageLabels = Object.keys(packageFiles);
+                    const packageValues = Object.values(packageFiles);
+                    createSourceChart('packageFilesChart', packageLabels, packageValues, 'Package Files Distribution');
+
+                    // Documentation & User Guidance Sources - Create table
+                    const docSources = data.sources["Documentation & User Guidance Sources"];
+                    createSourceTable('documentationSourcesTable', docSources, grandTotal);
+
+                    // Other Sources - Create table
+                    const otherSources = data.sources["Other Sources"];
+                    createSourceTable('otherSourcesTable', otherSources, grandTotal);
+                } catch (error) {
+                    console.error('Error loading sources data:', error);
+                }
+            }
+
+            // Function to create source tables
+            function createSourceTable(tableId, sources, grandTotal) {
+                const tbody = document.querySelector(`#${tableId} tbody`);
+                tbody.innerHTML = ''; // Clear existing content
+
+                // Sort sources by count (descending)
+                const sortedSources = Object.entries(sources).sort((a, b) => b[1] - a[1]);
+
+                // Calculate total for this category
+                const categoryTotal = Object.values(sources).reduce((sum, val) => sum + val, 0);
+
+                // Populate table rows
+                sortedSources.forEach(([source, count]) => {
+                    const row = tbody.insertRow();
+
+                    // Source name
+                    const cellSource = row.insertCell(0);
+                    cellSource.textContent = source;
+
+                    // Count
+                    const cellCount = row.insertCell(1);
+                    cellCount.textContent = count.toLocaleString();
+                    cellCount.style.textAlign = 'right';
+
+                    // Percentage
+                    const cellPercentage = row.insertCell(2);
+                    const percentage = ((count / grandTotal) * 100).toFixed(2);
+                    cellPercentage.textContent = `${percentage}%`;
+                    cellPercentage.style.textAlign = 'right';
+                });
+
+                // Add total row
+                const totalRow = tbody.insertRow();
+                totalRow.style.fontWeight = 'bold';
+                totalRow.style.backgroundColor = '#e8e8e8';
+
+                const totalLabelCell = totalRow.insertCell(0);
+                totalLabelCell.textContent = 'Category Total';
+
+                const totalCountCell = totalRow.insertCell(1);
+                totalCountCell.textContent = categoryTotal.toLocaleString();
+                totalCountCell.style.textAlign = 'right';
+
+                const totalPercentageCell = totalRow.insertCell(2);
+                const totalPercentage = ((categoryTotal / grandTotal) * 100).toFixed(2);
+                totalPercentageCell.textContent = `${totalPercentage}%`;
+                totalPercentageCell.style.textAlign = 'right';
+            }
+
+            // Function to create source charts (counts instead of percentages)
+            function createSourceChart(canvasId, labels, values, title) {
+                const ctx = document.getElementById(canvasId).getContext('2d');
+
+                if (charts[canvasId]) {
+                    charts[canvasId].destroy();
+                }
+
+                const backgroundColors = labels.map((_, index) => COLORS[index % COLORS.length]);
+
+                charts[canvasId] = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Count',
+                            data: values,
+                            backgroundColor: backgroundColors,
+                            borderColor: backgroundColors.map(color => color),
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: title,
+                                font: {
+                                    size: 16,
+                                    weight: 'bold'
+                                }
+                            },
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const count = context.parsed.y;
+                                        return `Count: ${count.toLocaleString()}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Count',
+                                    font: {
+                                        size: 12,
+                                        weight: 'bold'
+                                    }
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Source Type',
+                                    font: {
+                                        size: 12,
+                                        weight: 'bold'
+                                    }
+                                },
+                                ticks: {
+                                    autoSkip: false,
+                                    maxRotation: 45,
+                                    minRotation: 45
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            window.addEventListener('DOMContentLoaded', function() {
+                loadRQ3Data();
+                loadRQ4Data();
+                loadRQ5Data();
+                loadSourcesData();
+                loadTreemapData();
+            });
+
+        async function loadTreemapData() {
+            try {
+                const response = await fetch('data/group.json');
+                const data = await response.json();
+
+                // Transform data into hierarchical structure for treemap
+                const hierarchicalData = {
+                    name: "Metadata Fields",
+                    children: []
+                };
+
+                const colorScheme = {
+                    "Repository Information": "#003f5c",
+                    "Software Description & Semantics": "#7a5195",
+                    "Packaging Build & Release": "#ef5675",
+                    "Documentation & User Guidance": "#ffa600"
+                };
+
+
+                for (const [macroGroup, subGroups] of Object.entries(data)) {
+                    const macroNode = {
+                        name: macroGroup,
+                        children: [],
+                        color: colorScheme[macroGroup]
+                    };
+
+                    if (typeof subGroups === 'object' && !Array.isArray(subGroups)) {
+                        const firstValue = Object.values(subGroups)[0];
+
+                        if (typeof firstValue === 'object' && !Array.isArray(firstValue)) {
+
+                            for (const [subGroup, fields] of Object.entries(subGroups)) {
+                                const subNode = {
+                                    name: subGroup,
+                                    children: []
+                                };
+
+                                for (const [field, value] of Object.entries(fields)) {
+                                    subNode.children.push({
+                                        name: field,
+                                        value: value
+                                    });
+                                }
+
+                                macroNode.children.push(subNode);
+                            }
+                        } else {
+
+                            for (const [field, value] of Object.entries(subGroups)) {
+                                macroNode.children.push({
+                                    name: field,
+                                    value: value
+                                });
+                            }
+                        }
+                    }
+
+                    hierarchicalData.children.push(macroNode);
+                }
+
+                createTreemap(hierarchicalData);
             } catch (error) {
-                console.error('Error loading RQ5 data:', error);
+                console.error('Error loading treemap data:', error);
             }
         }
 
-        // Load all data when page loads
-        window.addEventListener('DOMContentLoaded', function() {
-            loadRQ3Data();
-            loadRQ4Data();
-            loadRQ5Data();
-        });
+        function createTreemap(data) {
+            const width = document.getElementById('treemap').offsetWidth;
+            const height = 800;
+
+            d3.select("#treemap").selectAll("*").remove();
+
+            const svg = d3.select("#treemap")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .style("font-family", "Arial, sans-serif");
+
+            const root = d3.hierarchy(data)
+                .sum(d => d.value)
+                .sort((a, b) => b.value - a.value);
+
+            d3.treemap()
+                .size([width, height])
+                .paddingInner(2)
+                .paddingOuter(2)
+                .round(true)
+                (root);
+
+            const colorScale = d3.scaleOrdinal()
+                .domain(["Repository Information", "Software Description & Semantics", "Packaging Build & Release", "Documentation & User Guidance", "Code & File Artifacts"])
+                .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]);
+
+            function getColor(d) {
+                let node = d;
+                while (node && node.depth > 1) node = node.parent;
+                return (node && node.data && node.data.color) ? node.data.color : colorScale((node && node.data) ? node.data.name : "");
+            }
+
+            function getBrightness(color) {
+                const rgb = d3.rgb(color);
+                return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+            }
+
+            const tooltip = d3.select("#tooltip");
+
+            const cell = svg.selectAll("g")
+                .data(root.leaves())
+                .join("g")
+                .attr("transform", d => `translate(${d.x0},${d.y0})`);
+
+            cell.append("rect")
+                .attr("width", d => Math.max(0, d.x1 - d.x0))
+                .attr("height", d => Math.max(0, d.y1 - d.y0))
+                .attr("fill", d => {
+                    const baseColor = getColor(d);
+                    return d.depth === 3 ? d3.rgb(baseColor).brighter(0.3) : baseColor;
+                })
+                .attr("stroke", "white")
+                .attr("stroke-width", 1.5)
+                .style("cursor", "pointer")
+                .on("mouseover", function(event, d) {
+                    d3.select(this)
+                        .attr("stroke", "#000")
+                        .attr("stroke-width", 2.5);
+
+                    const path = d.ancestors().reverse().map(n => n.data.name).slice(1).join(" → ");
+
+                    tooltip
+                        .style("opacity", 1)
+                        .html(`
+                            <strong>${d.data.name}</strong><br/>
+                            Path: ${path}<br/>
+                            Count: ${d.value.toLocaleString()} repositories<br/>
+                            Percentage: ${((d.value / 40645) * 100).toFixed(2)}%
+                        `)
+                        .style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 10) + "px");
+                })
+                .on("mousemove", function(event) {
+                    tooltip
+                        .style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 10) + "px");
+                })
+                .on("mouseout", function() {
+                    d3.select(this)
+                        .attr("stroke", "white")
+                        .attr("stroke-width", 1.5);
+
+                    tooltip.style("opacity", 0);
+                });
+
+            cell.each(function(d) {
+                const g = d3.select(this);
+                const w = Math.max(0, d.x1 - d.x0);
+                const h = Math.max(0, d.y1 - d.y0);
+
+                if (w < 48 || h < 22) return;
+
+                const rawLabel = d.data.name ? String(d.data.name).replace(/_/g, " ") : "";
+                if (!rawLabel) return;
+
+                const words = rawLabel.split(/\s+/);
+
+                let fontSize = 12;
+                const minFontSize = 7;
+                const lineHeight = 1.05; // line height multiplier
+                let lines = [];
+
+                function buildLinesForFont(fs) {
+                    const approxCharWidth = fs * 0.55; // approximate average char width in px
+                    const maxCharsPerLine = Math.floor((w - 6) / approxCharWidth);
+                    if (maxCharsPerLine <= 0) return [rawLabel.slice(0, Math.max(1, Math.floor((w - 6) / approxCharWidth)))];
+                    const out = [];
+                    let current = words[0] || "";
+                    for (let i = 1; i < words.length; i++) {
+                        const test = current + " " + words[i];
+                        if (test.length <= maxCharsPerLine) {
+                            current = test;
+                        } else {
+                            out.push(current);
+                            current = words[i];
+                        }
+                    }
+                    out.push(current);
+                    return out;
+                }
+
+                while (fontSize >= minFontSize) {
+                    lines = buildLinesForFont(fontSize).slice(0, 3);
+                    const tempText = g.append("text")
+                        .attr("x", 4)
+                        .attr("y", 4) // temporary positioning
+                        .attr("font-size", fontSize)
+                        .style("font-weight", 600)
+                        .style("pointer-events", "none");
+
+                    lines.forEach((line, i) => {
+                        tempText.append("tspan")
+                            .attr("x", 4)
+                            .attr("dy", i === 0 ? 0 : fontSize * lineHeight)
+                            .text(line);
+                    });
+
+                    const bbox = tempText.node().getBBox();
+                    tempText.remove();
+
+                    if (bbox.height <= h - 6 && bbox.width <= w - 6) {
+                        break; // fits
+                    }
+                    fontSize -= 1; // shrink and retry
+                }
+
+                if (fontSize < minFontSize) return;
+
+                const text = g.append("text")
+                    .attr("x", 4)
+                    .attr("y", 4 + fontSize) // baseline for first line
+                    .attr("font-size", fontSize)
+                    .attr("fill", () => {
+                        const rectColor = getColor(d);
+                        return getBrightness(rectColor) > 128 ? "#000" : "#fff";
+                    })
+                    .style("font-weight", 600)
+                    .style("pointer-events", "none");
+
+                lines.forEach((line, i) => {
+                    text.append("tspan")
+                        .attr("x", 4)
+                        .attr("dy", i === 0 ? 0 : fontSize * lineHeight)
+                        .text(line);
+                });
+            });
+
+            cell.filter(d => (d.x1 - d.x0) > 140 && (d.y1 - d.y0) > 80)
+                .append("text")
+                .attr("x", 6)
+                .attr("y", d => {
+                    return Math.max(14, (d.y1 - d.y0) - 6);
+                })
+                .text(d => `${((d.value / 40645) * 100).toFixed(1)}%`)
+                .attr("font-size", "10px")
+                .attr("fill", function(d) {
+                    const color = getColor(d);
+                    return getBrightness(color) > 128 ? "#444" : "#ddd";
+                })
+                .style("pointer-events", "none");
+        }
+
     </script>
 </body>
 </html>

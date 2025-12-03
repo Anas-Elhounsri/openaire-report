@@ -1,0 +1,44 @@
+{
+  "total_sources": 34,
+  "grand_total": 830510,
+  "sources": {
+    "Package Files": {
+      "setup.py": 18031,
+      "requirements.txt": 12493,
+      "DESCRIPTION": 11673,
+      "package.json": 11531,
+      "pyproject.toml": 11238,
+      "pom.xml": 4677,
+      "bower.json": 1021,
+      "Cargo.toml": 917,
+      "codemeta.json": 634,
+      "composer.json": 572,
+      ".gemspec": 175
+    },
+    "Other Sources": {
+      "GitHub_API": 522140,
+      "file_exploration": 51472,
+      "software_type_heuristics": 10568,
+      "supervised_classification": 7538,
+      ".ipynb": 6406,
+      ".md": 2878,
+      "Dockerfile": 2253,
+      "docker-compose.yml": 485,
+      ".txt": 106
+    },
+    "Documentation & User Guidance Sources": {
+      "README": 132478,
+      "LICENSE": 18527,
+      "INSTALL": 783,
+      ".cff": 668,
+      "CITATION": 362,
+      "AUTHORS": 487,
+      "CONTRIBUTORS": 246,
+      "CONTRIBUTING": 28,
+      "latest": 9,
+      "CODE_OF_CONDUCT": 3,
+      ".bib": 66,
+      "Acknowledgments": 45
+    }
+  }
+}
