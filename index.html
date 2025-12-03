@@ -224,17 +224,32 @@
     </div>
 
     <h2>Metadata Sources Distribution</h2>
-        <p>SoMEF extracts metadata from various sources across repositories. These visualizations show the distribution of sources grouped into three categories: Package Files (language-specific metadata files), Documentation & User Guidance Sources (human-readable documentation),
-            and Other Sources (API data, file exploration, and automated analysis). The grand total from 34 unique sources is: 830510 </p>
+        <p>SoMEF extracts metadata from various sources across repositories. These visualizations show the distribution of
+            sources grouped into three categories:</p>
+            <ul>
+              <li>Package Files (language-specific metadata files)</li>
+              <li>Documentation & User Guidance Sources (human-readable documentation)</li>
+              <li>Other Sources (API data, file exploration, and automated analysis).</li>
+            </ul>
 
-        <h3>Package Files Sources</h3>
-        <p>Package files are language-specific metadata files that contain structured information about software dependencies, versions, and configurations. These files are typically machine-readable and follow specific formats for different programming ecosystems.</p>
+        <p><strong> We have 34 unique sources from 40,982 repositories is with the grand total number of sources: 830,510 </strong></p>
+
+        <h3>Package Files Distribution</h3>
         <div class="chart-container">
             <canvas id="packageFilesChart"></canvas>
         </div>
+        <div id="packageFilesStats" style="background-color: #f4f4f4; padding: 15px; margin: 20px 0; border-radius: 5px; border-left: 4px solid #003f5c;">
+            <p style="margin: 5px 0;"><strong>Category Total:</strong> <span id="packageFilesTotal"></span></p>
+            <p style="margin: 5px 0;"><strong>Percentage of Total Sources:</strong> <span id="packageFilesPercentage"></span></p>
+        </div>
 
         <h3>Documentation & User Guidance Sources</h3>
-        <p>These sources include human-readable files that provide documentation, guidance, and information about the project. They are essential for understanding how to use, cite, and contribute to the software.</p>
+        <p>These sources include human-readable files sources (like README files of any extensions, CITATION files etc...) that provide documentation,
+            guidance, and information about the project. They are essential for understanding how to use, cite, and contribute to the software.</p>
+        <p>This category has grand total <strong>153,702 sources</strong>, from <strong>40,982 repositories</strong>. It should be noted in a repository, we can have README file
+        source appearing in multiple SoMEF categories, meaning we can find in the same repository that LICENSE in mentioned in README file,
+        Installation guide and how to cite, so we end up having one repository with the mention of README file as a source 3 times. Hence why README file
+        (with any file extension) can appear in different SoMEF categories</p>
         <table id="documentationSourcesTable">
             <thead>
                 <tr>
@@ -440,6 +455,12 @@
                     const packageLabels = Object.keys(packageFiles);
                     const packageValues = Object.values(packageFiles);
                     createSourceChart('packageFilesChart', packageLabels, packageValues, 'Package Files Distribution');
+
+                    // Calculate and display Package Files statistics
+                    const packageTotal = packageValues.reduce((sum, val) => sum + val, 0);
+                    const packagePercentage = ((packageTotal / grandTotal) * 100).toFixed(2);
+                    document.getElementById('packageFilesTotal').textContent = packageTotal.toLocaleString();
+                    document.getElementById('packageFilesPercentage').textContent = `${packagePercentage}%`;
 
                     // Documentation & User Guidance Sources - Create table
                     const docSources = data.sources["Documentation & User Guidance Sources"];
