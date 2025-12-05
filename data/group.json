@@ -38,7 +38,6 @@
       "development_status": 28,
       "date_published": 22
     },
-
     "Visual Elements": {
       "logo": 2373,
       "images": 8306
@@ -46,7 +45,7 @@
   },
 
   "Packaging Build & Release": {
-    "Packaging": {
+    "Packages": {
       "has_package_file": 5525,
       "package_id": 7657,
       "package_distribution": 1016,

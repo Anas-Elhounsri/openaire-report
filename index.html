@@ -62,8 +62,34 @@
         }
 
         .chart-container {
-            margin: 30px 0;
-            max-width: 800px;
+                margin: 30px 0;
+                max-width: 800px;
+            }
+
+        .chart-table-container {
+            display: flex;
+            gap: 30px;
+            margin: 30px auto;
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .chart-wrapper {
+            flex: 0 0 60%;
+            min-width: 400px;
+            max-width: 700px;
+        }
+
+        .table-wrapper {
+            flex: 0 0 35%;
+            min-width: 280px;
+            max-width: 450px;
+            margin-top: 40px;
+        }
+
+        .table-wrapper table {
+            margin: 0;
         }
 
         .stats {
@@ -92,9 +118,7 @@
 
     <div class="stats">
         <p><strong>Current number of repositories analyzed:</strong> 40,982</p>
-        <p><strong>Duplicates found:</strong> 0</p>
-        <p><strong>codemeta.json files found:</strong> 54</p>
-        <p><strong>Authors from Ontology Engineering Group (OEG):</strong><a href="https://orcid.org/0000-0003-0454-7145">Daniel Garijo</a>,
+        <p><strong>Authors (from OEG, Universidad Politécnica de Madrid): </strong><a href="https://orcid.org/0000-0003-0454-7145">Daniel Garijo</a>,
             <a href="https://orcid.org/0000-0003-4112-6825">Esteban González</a>, <a href="https://orcid.org/0009-0005-6868-4511">Anas El Hounsri</a></p>
     </div>
 
@@ -163,6 +187,9 @@
     </table>
 
     <h3>Metadata File Definitions</h3>
+    <p>The way how we conducted the study for RQ1 is that we detected the presence of each repository has the corresponding metadata file once, meaning <strong>one repository</strong>
+    can have multiple package files like setup.py, pom.xml etc, but we only count it once, same goes for the rest of the metadata files.</p>
+    <p>We look at the following metadata files: </p>
 
     <p><strong>Citation File Format (CFF):</strong> Metadata file containing human and machine-readable citation metadata for research software. CFF is serialized in YAML, and includes fields for tracking license, title and url of a code deposit among others.</p>
 
@@ -185,62 +212,273 @@
     <h2>RQ2: How do software projects adopt versioning?</h2>
     <p>We observed whether software projects had code releases and consistent versioning naming scheme (i.e., all releases follow the same conventions) to provide a comprehensive understanding of versioning practices and how well are they documented.</p>
 
+
     <h3>RQ2-1: Releases and Consistency</h3>
-    <div class="chart-container">
-        <canvas id="rq3_1Chart"></canvas>
-    </div>
+        <div class="chart-table-container">
+            <div class="chart-wrapper">
+                <canvas id="rq3_1Chart"></canvas>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rq3_1Table">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-    <h3>RQ2-2: Versioning Schemes</h3>
-    <p><strong>Semantic versioning:</strong> The project uses releases following the "X.Y.Z" notation, where X stands for major changes, Y for minor changes and Z for patches.</p>
-    <p><strong>Calendar versioning:</strong> The project uses the current date to tag their releases.</p>
-    <p><strong>Alphanumeric:</strong> The project combines numbers and characters in the release.</p>
+        <h3>RQ2-2: Versioning Schemes</h3>
+        <div class="chart-table-container">
+            <div class="chart-wrapper">
+                <canvas id="rq3_2Chart"></canvas>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Versioning Scheme</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rq3_2Table">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-    <div class="chart-container">
-        <canvas id="rq3_2Chart"></canvas>
-    </div>
+        <h2>RQ3: How comprehensive is the metadata provided in code repositories?</h2>
 
-    <h2>RQ3: How comprehensive is the metadata provided in code repositories?</h2>
+        <h3>RQ3-1: Project Description</h3>
+        <p>We assess if software projects have a "short description", (i.e., a one line summary of the project), or a longer description. The short description is provided by GitHub API, and the longer description is extracted with SoMEF from the README.md file. We aim to capture the depth and accessibility of project descriptions across platforms.</p>
 
-    <h3>RQ3-1: Project Description</h3>
-    <p>We assess if software projects have a "short description", (i.e., a one line summary of the project), or a longer description. The short description is provided by GitHub API, and the longer description is extracted with SoMEF from the README.md file. We aim to capture the depth and accessibility of project descriptions across platforms.</p>
+        <div class="chart-table-container">
+            <div class="chart-wrapper">
+                <canvas id="rq4_1Chart"></canvas>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description Type</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rq4_1Table">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-    <div class="chart-container">
-        <canvas id="rq4_1Chart"></canvas>
-    </div>
+        <h3>RQ3-2: License</h3>
+        <p>We assess whether:</p>
+        <ul>
+            <li>A license is declared</li>
+            <li>Whether that license follows the SPDX conventions (i.e., it is a known license). This allows us to quantify the degree to which communities follow recognized norms for software licensing, essential for compliance and interoperability.</li>
+        </ul>
 
-    <h3>RQ3-2: License</h3>
-    <p>We assess whether:</p>
-    <ul>
-        <li>A license is declared</li>
-        <li>Whether that license follows the SPDX conventions (i.e., it is a known license). This allows us to quantify the degree to which communities follow recognized norms for software licensing, essential for compliance and interoperability.</li>
-    </ul>
+        <div class="chart-table-container">
+            <div class="chart-wrapper">
+                <canvas id="rq4_2Chart"></canvas>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>License Status</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rq4_2Table">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-    <div class="chart-container">
-        <canvas id="rq4_2Chart"></canvas>
-    </div>
+        <h3>RQ3-3: Installation Instructions</h3>
+        <p>We assess whether installation instructions, covering installation steps, requirements, and documentation, are included in a code repository. We use SoMEF for the extraction, which looks into specific headers of the README files mentioning installation instructions, and links to external documentation (readthedocs, wiki setup).</p>
+        <p>In addition, we look for specific files describing requirements such as 'requirements.txt' in Python, 'pom.xml' in Java, etc.</p>
+        <p>Collectively, these attributes reveal how communities approach metadata and reflect their commitment to accessibility, traceability, and best practices in software metadata management.</p>
 
-    <h3>RQ3-3: Installation Instructions</h3>
-    <p>We assess whether installation instructions, covering installation steps, requirements, and documentation, are included in a code repository. We use SoMEF for the extraction, which looks into specific headers of the README files mentioning installation instructions, and links to external documentation (readthedocs, wiki setup).</p>
-    <p>In addition, we look for specific files describing requirements such as 'requirements.txt' in Python, 'pom.xml' in Java, etc.</p>
-    <p>Collectively, these attributes reveal how communities approach metadata and reflect their commitment to accessibility, traceability, and best practices in software metadata management.</p>
+        <div class="chart-table-container">
+            <div class="chart-wrapper">
+                <canvas id="rq4_3Chart"></canvas>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Documentation Type</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rq4_3Table">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-    <div class="chart-container">
-        <canvas id="rq4_3Chart"></canvas>
-    </div>
+        <h2>RQ4: What are the most common citation practices among communities?</h2>
 
-    <h2>RQ4: What are the most common citation practices among communities?</h2>
+        <p><strong>BibTeX file:</strong> A BibTeX file (e.g., CITATION.bib) is available in the repository. BibTeX is a popular reference management tool, used with LaTeX to format bibliographies. ".bib" files are plain text files containing bibliographic information structured in a specific format.</p>
 
-    <p><strong>BibTeX file:</strong> A BibTeX file (e.g., CITATION.bib) is available in the repository. BibTeX is a popular reference management tool, used with LaTeX to format bibliographies. ".bib" files are plain text files containing bibliographic information structured in a specific format.</p>
+        <p><strong>Citation File Format file (CFF):</strong> A Citation File Format file (CFF) is available in the repository. CFF files are a good practice that has recently seen uptake from the scientific community, receiving support from platforms such as GitHub.</p>
 
-    <p><strong>Citation File Format file (CFF):</strong> A Citation File Format file (CFF) is available in the repository. CFF files are a good practice that has recently seen uptake from the scientific community, receiving support from platforms such as GitHub.</p>
+        <p><strong>README contains a citation:</strong> Alternatively, we assess if the README file contains a citation (i.e., by retrieving BibTeX code in it), since many authors choose to suggest others how to cite their software directly with a BibTeX entry. The presence of citation details in README.md files represents a less formalized method of citation, but still widely used.</p>
 
-    <p><strong>README contains a citation:</strong> Alternatively, we assess if the README file contains a citation (i.e., by retrieving BibTeX code in it), since many authors choose to suggest others how to cite their software directly with a BibTeX entry. The presence of citation details in README.md files represents a less formalized method of citation, but still widely used.</p>
+        <div class="chart-table-container">
+            <div class="chart-wrapper">
+                <canvas id="rq5Chart"></canvas>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Citation Method</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rq5Table">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-    <div class="chart-container">
-        <canvas id="rq5Chart"></canvas>
-    </div>
+        </div>
 
-    <h2>Metadata Sources Distribution</h2>
+        <h2>Metadata Fields by Category - Treemap Visualization</h2>
+        <p>This treemap shows the hierarchical distribution of metadata fields extracted by SoMEF across major categories.
+            Each colored block represents a macro category, with nested rectangles showing subcategories and individual fields.
+            Larger rectangles indicate higher repository counts. Hover to see details.</p>
+        <p>The Structure of these group looks like the following:</p>
+        <style>
+        .flowchart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .flowchart-level {
+            display: flex;
+            gap: 40px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .flowchart-box {
+            padding: 16px 20px;
+            border-radius: 10px;
+            min-width: 220px;
+            text-align: left;
+            color: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+
+        .flowchart-box h4 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .flowchart-box ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 14px;
+        }
+        </style>
+
+        <div class="flowchart-container">
+
+            <div class="flowchart-level">
+
+                <!-- Repository Information -->
+                <div class="flowchart-box" style="background:#003f5c;">
+                    <h4>Repository Information</h4>
+                    <ul>
+                        <li>Repository Identification</li>
+                        <li>Web Sources</li>
+                        <li>Repository Activity & Popularity</li>
+                    </ul>
+                </div>
+
+                <!-- Software Description & Semantics -->
+                <div class="flowchart-box" style="background:#7a5195;">
+                    <h4>Software Description & Semantics</h4>
+                    <ul>
+                        <li>General Description</li>
+                        <li>Scholarly Context</li>
+                        <li>Visual Elements</li>
+                    </ul>
+                </div>
+
+                <!-- Packaging Build & Release -->
+                <div class="flowchart-box" style="background:#ef5675;">
+                    <h4>Packaging Build & Release</h4>
+                    <ul>
+                        <li>Packages</li>
+                        <li>Build & Dependencies</li>
+                        <li>Release Management</li>
+                        <li>Code & File Artifacts</li>
+                    </ul>
+                </div>
+
+                <!-- Documentation & User Guidance -->
+                <div class="flowchart-box" style="background:#ffa600;">
+                    <h4>Documentation & User Guidance</h4>
+                    <ul>
+                        <li>Usage & Installation</li>
+                        <li>Extended Documentation</li>
+                        <li>Community & Governance</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <p>Each subgroup will have the corresponding SoMEF categories. For example, the subgroup <strong>Repository Identification</strong>, consist of the SoMEF categories:
+            "name", "full_name", "identifier", "full_title", "code_repository", "owner". Each of these metadata fields, can have <strong>more than one source</strong>, in
+            some cases we can find that "code_repository" alone is extracted from multiple files like "README", "codemeata.json" etc.
+        </p>
+        <p><strong>Hover over the figures for more information about adoption.</strong></p>
+
+        <div id="treemapLegend" style="text-align: center; margin: 20px 0;">
+            <div style="display: inline-block; margin: 0 15px;">
+                <span style="display: inline-block; width: 20px; height: 20px; background-color: #003f5c; vertical-align: middle;"></span>
+                Repository Information
+            </div>
+            <div style="display: inline-block; margin: 0 15px;">
+                <span style="display: inline-block; width: 20px; height: 20px; background-color: #7a5195; vertical-align: middle;"></span>
+                Software Description & Semantics
+            </div>
+            <div style="display: inline-block; margin: 0 15px;">
+                <span style="display: inline-block; width: 20px; height: 20px; background-color: #ef5675; vertical-align: middle;"></span>
+                Packaging Build & Release
+            </div>
+            <div style="display: inline-block; margin: 0 15px;">
+                <span style="display: inline-block; width: 20px; height: 20px; background-color: #ffa600; vertical-align: middle;"></span>
+                Documentation & User Guidance
+            </div>
+        </div>
+
+        <div id="treemap" style="width: 100%; height: 800px; margin: 30px 0;"></div>
+
+        <div class="tooltip" id="tooltip" style="position: absolute; opacity: 0; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; pointer-events: none; font-size: 12px; z-index: 1000;"></div>
+
+        <h2>Distribution of metadata files</h2>
         <p>SoMEF extracts metadata from various sources across repositories. These visualizations show the distribution of
             sources grouped into three categories:</p>
             <ul>
@@ -249,11 +487,27 @@
               <li>Other Sources (API data, file exploration, and automated analysis).</li>
             </ul>
 
-        <p><strong> We have 34 unique sources from 40,982 repositories is with the grand total number of sources: 830,510 </strong></p>
-
+        <p><strong>This section shows the distribution of the sources from 40,982 repositories. Each repository can have more than one
+            source, which we ended up with grand total number of sources: 830,510 </strong></p>
         <h3>Package Files Distribution</h3>
-        <div class="chart-container">
-            <canvas id="packageFilesChart"></canvas>
+        <div class="chart-table-container">
+            <div class="chart-wrapper">
+                <canvas id="packageFilesChart"></canvas>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Count</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="packageFilesTable">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div id="packageFilesStats" style="background-color: #f4f4f4; padding: 15px; margin: 20px 0; border-radius: 5px; border-left: 4px solid #003f5c;">
             <p style="margin: 5px 0;"><strong>Category Total:</strong> <span id="packageFilesTotal"></span></p>
@@ -263,10 +517,9 @@
         <h3>Documentation & User Guidance Sources</h3>
         <p>These sources include human-readable files sources (like README files of any extensions, CITATION files etc...) that provide documentation,
             guidance, and information about the project. They are essential for understanding how to use, cite, and contribute to the software.</p>
-        <p>This category has grand total <strong>153,702 sources</strong>, from <strong>40,982 repositories</strong>. It should be noted in a repository, we can have README file
-        source appearing in multiple SoMEF categories, meaning we can find in the same repository that LICENSE in mentioned in README file,
-        Installation guide and how to cite, so we end up having one repository with the mention of README file as a source 3 times. Hence why README file
-        (with any file extension) can appear in different SoMEF categories</p>
+        <p>It should be noted in a repository, we can have README file  source appearing in multiple SoMEF categories, meaning we can find in the same repository that LICENSE
+            in mentioned in README file, Installation guide and how to cite, so we end up having one repository with the mention of README file as a source 3 times.
+            Hence why README file (with any file extension) can appear in different SoMEF categories but under the same repository</p>
         <table id="documentationSourcesTable">
             <thead>
                 <tr>
@@ -294,34 +547,6 @@
                 <!-- Data will be populated by JavaScript -->
             </tbody>
         </table>
-
-    <h2>Metadata Fields by Category - Treemap Visualization</h2>
-    <p>This treemap shows the hierarchical distribution of metadata fields extracted by SoMEF across major categories. Each colored block represents a macro category, with nested rectangles showing subcategories and individual fields. Larger rectangles indicate higher repository counts. Hover to see details.</p>
-
-    <div id="treemapLegend" style="text-align: center; margin: 20px 0;">
-        <div style="display: inline-block; margin: 0 15px;">
-            <span style="display: inline-block; width: 20px; height: 20px; background-color: #003f5c; vertical-align: middle;"></span>
-            Repository Information
-        </div>
-        <div style="display: inline-block; margin: 0 15px;">
-            <span style="display: inline-block; width: 20px; height: 20px; background-color: #7a5195; vertical-align: middle;"></span>
-            Software Description & Semantics
-        </div>
-        <div style="display: inline-block; margin: 0 15px;">
-            <span style="display: inline-block; width: 20px; height: 20px; background-color: #ef5675; vertical-align: middle;"></span>
-            Packaging Build & Release
-        </div>
-        <div style="display: inline-block; margin: 0 15px;">
-            <span style="display: inline-block; width: 20px; height: 20px; background-color: #ffa600; vertical-align: middle;"></span>
-            Documentation & User Guidance
-        </div>
-    </div>
-
-
-    <div id="treemap" style="width: 100%; height: 800px; margin: 30px 0;"></div>
-
-    <div class="tooltip" id="tooltip" style="position: absolute; opacity: 0; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; pointer-events: none; font-size: 12px; z-index: 1000;"></div>
-
     <script>
 
         const COLORS = ['#003f5c', '#7a5195', '#ef5675', '#ffa600', '#2f4b7c', '#fff1b7', '#de425b', '#ea6b5b',
@@ -409,11 +634,13 @@
                 const labels_1 = Object.keys(rq3_1);
                 const values_1 = Object.values(rq3_1);
                 createChart('rq3_1Chart', labels_1, values_1, 'RQ2-1: Releases and Consistency');
+                populateTable('rq3_1Table', rq3_1);
 
                 const rq3_2 = rq3Data['rq3-2'];
                 const labels_2 = Object.keys(rq3_2);
                 const values_2 = Object.values(rq3_2);
                 createChart('rq3_2Chart', labels_2, values_2, 'RQ2-2: Version Schemes');
+                populateTable('rq3_2Table', rq3_2);
             } catch (error) {
                 console.error('Error loading RQ3 data:', error);
             }
@@ -430,16 +657,19 @@
                 const labels_1 = Object.keys(rq4_1);
                 const values_1 = Object.values(rq4_1);
                 createChart('rq4_1Chart', labels_1, values_1, 'RQ3-1: Project Description');
+                populateTable('rq4_1Table', rq4_1);
 
                 const rq4_2 = rq4Data['rq4-2'];
                 const labels_2 = Object.keys(rq4_2);
                 const values_2 = Object.values(rq4_2);
                 createChart('rq4_2Chart', labels_2, values_2, 'RQ3-2: License Adoption');
+                populateTable('rq4_2Table', rq4_2);
 
                 const rq4_3 = rq4Data['rq4-3'];
                 const labels_3 = Object.keys(rq4_3);
                 const values_3 = Object.values(rq4_3);
                 createChart('rq4_3Chart', labels_3, values_3, 'RQ3-3: Installation Instructions');
+                populateTable('rq4_3Table', rq4_3);
             } catch (error) {
                 console.error('Error loading RQ4 data:', error);
             }
@@ -455,9 +685,37 @@
                     const labels = Object.keys(rq5Data);
                     const values = Object.values(rq5Data);
                     createChart('rq5Chart', labels, values, 'RQ4: Citation Practices');
+                    populateTable('rq5Table', rq5Data);
                 } catch (error) {
                     console.error('Error loading RQ5 data:', error);
                 }
+            }
+
+            // Function to populate tables with data
+            function populateTable(tableId, data) {
+                const tbody = document.getElementById(tableId);
+                if (!tbody) return;
+
+                tbody.innerHTML = ''; // Clear existing content
+
+                // Sort data by value (descending)
+                const sortedData = Object.entries(data).sort((a, b) => b[1] - a[1]);
+
+                // Populate table rows
+                sortedData.forEach(([key, value]) => {
+                    const row = tbody.insertRow();
+
+                    // Category/Label name
+                    const cellLabel = row.insertCell(0);
+                    // Capitalize first letter and replace underscores with spaces
+                    const formattedLabel = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    cellLabel.textContent = formattedLabel;
+
+                    // Percentage value
+                    const cellValue = row.insertCell(1);
+                    cellValue.textContent = value.toFixed(2) + '%';
+                    cellValue.style.textAlign = 'right';
+                });
             }
 
             // Load and process sources data
@@ -479,6 +737,9 @@
                     document.getElementById('packageFilesTotal').textContent = packageTotal.toLocaleString();
                     document.getElementById('packageFilesPercentage').textContent = `${packagePercentage}%`;
 
+                    // Populate Package Files table
+                    populateSourceTable('packageFilesTable', packageFiles, grandTotal);
+
                     // Documentation & User Guidance Sources - Create table
                     const docSources = data.sources["Documentation & User Guidance Sources"];
                     createSourceTable('documentationSourcesTable', docSources, grandTotal);
@@ -491,6 +752,36 @@
                 }
             }
 
+            // Function to populate source tables (for Package Files table next to chart)
+            function populateSourceTable(tableId, sources, grandTotal) {
+                const tbody = document.getElementById(tableId);
+                if (!tbody) return;
+
+                tbody.innerHTML = ''; // Clear existing content
+
+                // Sort sources by count (descending)
+                const sortedSources = Object.entries(sources).sort((a, b) => b[1] - a[1]);
+
+                // Populate table rows
+                sortedSources.forEach(([source, count]) => {
+                    const row = tbody.insertRow();
+
+                    // Source name
+                    const cellSource = row.insertCell(0);
+                    cellSource.textContent = source;
+
+                    // Count
+                    const cellCount = row.insertCell(1);
+                    cellCount.textContent = count.toLocaleString();
+                    cellCount.style.textAlign = 'right';
+
+                    // Percentage
+                    const cellPercentage = row.insertCell(2);
+                    const percentage = ((count / grandTotal) * 100).toFixed(2);
+                    cellPercentage.textContent = `${percentage}%`;
+                    cellPercentage.style.textAlign = 'right';
+                });
+            }
             // Function to create source tables
             function createSourceTable(tableId, sources, grandTotal) {
                 const tbody = document.querySelector(`#${tableId} tbody`);
