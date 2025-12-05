@@ -1,0 +1,99 @@
+{
+  "Repository Information": {
+    "Repository Identification": {
+      "name": 40645,
+      "full_name": 40645,
+      "identifier": 1414,
+      "full_title": 28969,
+      "code_repository": 40645,
+      "owner": 40645
+    },
+    "Web Sources": {
+      "homepage": 5556,
+      "download_url": 40645,
+      "readme_url": 36306
+    },
+    "Repository Activity and Popularity": {
+      "stargazers_count": 28859,
+      "forks_count": 22915,
+      "issue_tracker": 40645,
+      "repository_status": 54,
+      "date_created": 40645,
+      "date_updated": 40645
+    }
+  },
+
+  "Software Description & Semantics": {
+    "General Description": {
+      "description": 35953,
+      "type": 10568,
+      "application_domain": 7548,
+      "programming_languages": 36813,
+      "keywords": 8346
+    },
+    "Scholarly Context": {
+      "citation": 9110,
+      "related_papers": 4475,
+      "reference_publication": 3,
+      "development_status": 28,
+      "date_published": 22
+    },
+    "Visual Elements": {
+      "logo": 2373,
+      "images": 8306
+    }
+  },
+
+  "Packaging Build & Release": {
+    "Packages": {
+      "has_package_file": 5525,
+      "package_id": 7657,
+      "package_distribution": 1016,
+      "version": 4375
+    },
+
+    "Build & Dependencies": {
+      "has_build_file": 12998,
+      "requirements": 12824,
+      "runtime_platform": 1717,
+      "continuous_integration": 3265
+    },
+
+    "Release Management": {
+      "releases": 8846,
+      "download": 1221
+    },
+
+    "Code & File Artifacts": {
+      "has_script_file": 9183,
+      "ontologies": 167,
+      "workflows": 259
+    }
+  },
+
+  "Documentation & User Guidance": {
+    "Usage and Installation": {
+      "installation": 10805,
+      "usage": 10944,
+      "run": 3923
+    },
+
+    "Extended Documentation": {
+      "documentation": 5489,
+      "related_documentation": 1125,
+      "executable_example": 6482,
+      "faq": 692
+    },
+
+    "Community & Governance": {
+      "contributing_guidelines": 2770,
+      "code_of_conduct": 927,
+      "support": 1548,
+      "support_channels": 43,
+      "acknowledgement": 1969,
+      "contributors": 727,
+      "authors": 4791,
+      "contact": 1657
+    }
+  }
+}
