@@ -1,0 +1,366 @@
+{
+  "Repository Information": [
+    {
+      "source": "GitHub_API",
+      "count": 381819,
+      "percentage": 83.81
+    },
+    {
+      "source": "file_exploration",
+      "count": 36306,
+      "percentage": 7.97
+    },
+    {
+      "source": "README",
+      "count": 30414,
+      "percentage": 6.68
+    },
+    {
+      "source": "setup.py",
+      "count": 2175,
+      "percentage": 0.48
+    },
+    {
+      "source": "package.json",
+      "count": 1605,
+      "percentage": 0.35
+    },
+    {
+      "source": "DESCRIPTION",
+      "count": 1421,
+      "percentage": 0.31
+    },
+    {
+      "source": "pyproject.toml",
+      "count": 1164,
+      "percentage": 0.26
+    },
+    {
+      "source": "codemeta.json",
+      "count": 243,
+      "percentage": 0.05
+    },
+    {
+      "source": "bower.json",
+      "count": 243,
+      "percentage": 0.05
+    },
+    {
+      "source": "pom.xml",
+      "count": 83,
+      "percentage": 0.02
+    },
+    {
+      "source": "Cargo.toml",
+      "count": 55,
+      "percentage": 0.01
+    },
+    {
+      "source": "composer.json",
+      "count": 31,
+      "percentage": 0.01
+    },
+    {
+      "source": ".gemspec",
+      "count": 5,
+      "percentage": 0.0
+    },
+    {
+      "source": "Setup.py",
+      "count": 1,
+      "percentage": 0.0
+    }
+  ],
+  "Software Description & Semantics": [
+    {
+      "source": "GitHub_API",
+      "count": 73159,
+      "percentage": 47.5
+    },
+    {
+      "source": "README",
+      "count": 51935,
+      "percentage": 33.72
+    },
+    {
+      "source": "software_type_heuristics",
+      "count": 10568,
+      "percentage": 6.86
+    },
+    {
+      "source": "supervised_classification",
+      "count": 7538,
+      "percentage": 4.89
+    },
+    {
+      "source": "setup.py",
+      "count": 4809,
+      "percentage": 3.12
+    },
+    {
+      "source": "DESCRIPTION",
+      "count": 1625,
+      "percentage": 1.06
+    },
+    {
+      "source": "package.json",
+      "count": 1393,
+      "percentage": 0.9
+    },
+    {
+      "source": "pyproject.toml",
+      "count": 1225,
+      "percentage": 0.8
+    },
+    {
+      "source": ".cff",
+      "count": 668,
+      "percentage": 0.43
+    },
+    {
+      "source": "CITATION",
+      "count": 362,
+      "percentage": 0.24
+    },
+    {
+      "source": "codemeta.json",
+      "count": 210,
+      "percentage": 0.14
+    },
+    {
+      "source": "bower.json",
+      "count": 180,
+      "percentage": 0.12
+    },
+    {
+      "source": "composer.json",
+      "count": 109,
+      "percentage": 0.07
+    },
+    {
+      "source": "Cargo.toml",
+      "count": 97,
+      "percentage": 0.06
+    },
+    {
+      "source": ".bib",
+      "count": 66,
+      "percentage": 0.04
+    },
+    {
+      "source": "file_exploration",
+      "count": 52,
+      "percentage": 0.03
+    },
+    {
+      "source": ".gemspec",
+      "count": 5,
+      "percentage": 0.0
+    },
+    {
+      "source": "Setup.py",
+      "count": 1,
+      "percentage": 0.0
+    }
+  ],
+  "Packaging Build & Release": [
+    {
+      "source": "file_exploration",
+      "count": 12864,
+      "percentage": 16.3
+    },
+    {
+      "source": "requirements.txt",
+      "count": 12493,
+      "percentage": 15.83
+    },
+    {
+      "source": "GitHub_API",
+      "count": 8846,
+      "percentage": 11.21
+    },
+    {
+      "source": "README",
+      "count": 8194,
+      "percentage": 10.38
+    },
+    {
+      "source": "setup.py",
+      "count": 7205,
+      "percentage": 9.13
+    },
+    {
+      "source": "pyproject.toml",
+      "count": 6968,
+      "percentage": 8.83
+    },
+    {
+      "source": "package.json",
+      "count": 6949,
+      "percentage": 8.81
+    },
+    {
+      "source": "DESCRIPTION",
+      "count": 6563,
+      "percentage": 8.32
+    },
+    {
+      "source": "pom.xml",
+      "count": 4406,
+      "percentage": 5.58
+    },
+    {
+      "source": "Dockerfile",
+      "count": 2253,
+      "percentage": 2.86
+    },
+    {
+      "source": "Cargo.toml",
+      "count": 621,
+      "percentage": 0.79
+    },
+    {
+      "source": "bower.json",
+      "count": 495,
+      "percentage": 0.63
+    },
+    {
+      "source": "docker-compose.yml",
+      "count": 485,
+      "percentage": 0.61
+    },
+    {
+      "source": "composer.json",
+      "count": 321,
+      "percentage": 0.41
+    },
+    {
+      "source": ".gemspec",
+      "count": 157,
+      "percentage": 0.2
+    },
+    {
+      "source": "codemeta.json",
+      "count": 82,
+      "percentage": 0.1
+    },
+    {
+      "source": "Setup.py",
+      "count": 4,
+      "percentage": 0.01
+    }
+  ],
+  "Documentation & User Guidance": [
+    {
+      "source": "README",
+      "count": 38122,
+      "percentage": 67.76
+    },
+    {
+      "source": ".ipynb",
+      "count": 6406,
+      "percentage": 11.39
+    },
+    {
+      "source": ".md",
+      "count": 2878,
+      "percentage": 5.12
+    },
+    {
+      "source": "file_exploration",
+      "count": 2232,
+      "percentage": 3.97
+    },
+    {
+      "source": "setup.py",
+      "count": 2060,
+      "percentage": 3.66
+    },
+    {
+      "source": "pyproject.toml",
+      "count": 1371,
+      "percentage": 2.44
+    },
+    {
+      "source": "INSTALL",
+      "count": 783,
+      "percentage": 1.39
+    },
+    {
+      "source": "package.json",
+      "count": 681,
+      "percentage": 1.21
+    },
+    {
+      "source": "AUTHORS",
+      "count": 480,
+      "percentage": 0.85
+    },
+    {
+      "source": "DESCRIPTION",
+      "count": 446,
+      "percentage": 0.79
+    },
+    {
+      "source": "CONTRIBUTORS",
+      "count": 246,
+      "percentage": 0.44
+    },
+    {
+      "source": "pom.xml",
+      "count": 188,
+      "percentage": 0.33
+    },
+    {
+      "source": ".txt",
+      "count": 106,
+      "percentage": 0.19
+    },
+    {
+      "source": "Cargo.toml",
+      "count": 80,
+      "percentage": 0.14
+    },
+    {
+      "source": "codemeta.json",
+      "count": 47,
+      "percentage": 0.08
+    },
+    {
+      "source": "Acknowledgments",
+      "count": 45,
+      "percentage": 0.08
+    },
+    {
+      "source": "composer.json",
+      "count": 43,
+      "percentage": 0.08
+    },
+    {
+      "source": "CONTRIBUTING",
+      "count": 28,
+      "percentage": 0.05
+    },
+    {
+      "source": "authors",
+      "count": 7,
+      "percentage": 0.01
+    },
+    {
+      "source": ".gemspec",
+      "count": 5,
+      "percentage": 0.01
+    },
+    {
+      "source": "CODE_OF_CONDUCT",
+      "count": 3,
+      "percentage": 0.01
+    },
+    {
+      "source": "LICENSE",
+      "count": 1,
+      "percentage": 0.0
+    }
+  ]
+
+}

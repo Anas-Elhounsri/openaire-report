@@ -92,6 +92,17 @@
             margin: 0;
         }
 
+        .table-wide {
+            margin: 20px 0;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .table-wide table {
+            margin: 0; /* keep spacing controlled by .table-wide */
+            width: 100%;
+        }
+
         .stats {
             text-align: center;
             margin: 30px 0;
@@ -118,8 +129,8 @@
 
     <div class="stats">
         <p><strong>Current number of repositories analyzed:</strong> 40,982</p>
-        <p><strong>Authors (from OEG, Universidad Politécnica de Madrid): </strong><a href="https://orcid.org/0000-0003-0454-7145">Daniel Garijo</a>,
-            <a href="https://orcid.org/0000-0003-4112-6825">Esteban González</a>, <a href="https://orcid.org/0009-0005-6868-4511">Anas El Hounsri</a></p>
+        <p><strong>Authors (from OEG, Universidad PolitÃ©cnica de Madrid): </strong><a href="https://orcid.org/0000-0003-0454-7145">Daniel Garijo</a>,
+            <a href="https://orcid.org/0000-0003-4112-6825">Esteban GonzÃ¡lez</a>, <a href="https://orcid.org/0009-0005-6868-4511">Anas El Hounsri</a></p>
         <p><strong>Data collection: </strong>OpenAIRE: Claudio Atzori</p>
     </div>
 
@@ -135,6 +146,7 @@
             </ul>
         </li>
         <li><strong>RQ4:</strong> What are the most common citation practices among communities?</li>
+        <li><strong>RQ5:</strong> What is the distribution of the source files in accordance with metadata fields?</li>
     </ul>
 
     <h2>RQ1: How do communities describe Research Software metadata in their code repositories?</h2>
@@ -357,7 +369,8 @@
 
         </div>
 
-        <h2>Metadata Fields by Category - Treemap Visualization</h2>
+        <h2>RQ5: What is the distribution of the source files in accordance with metadata fields?</h2>
+        <h3>Metadata Fields by Category - Treemap Visualization</h3>
         <p>This treemap shows the hierarchical distribution of metadata fields extracted by SoMEF across major categories.
             Each colored block represents a macro category, with nested rectangles showing subcategories and individual fields.
             Larger rectangles indicate higher repository counts. Hover to see details.</p>
@@ -479,76 +492,80 @@
 
         <div class="tooltip" id="tooltip" style="position: absolute; opacity: 0; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; pointer-events: none; font-size: 12px; z-index: 1000;"></div>
 
-        <h2>Distribution of metadata files</h2>
-        <p>SoMEF extracts metadata from various sources across repositories. These visualizations show the distribution of
-            sources grouped into three categories:</p>
-            <ul>
-              <li>Package Files (language-specific metadata files)</li>
-              <li>Documentation & User Guidance Sources (human-readable documentation)</li>
-              <li>Other Sources (API data, file exploration, and automated analysis).</li>
-            </ul>
-
-        <p><strong>This section shows the distribution of the sources from 40,982 repositories. Each repository can have more than one
-            source, which we ended up with grand total number of sources: 830,510 </strong></p>
-        <h3>Package Files Distribution</h3>
-        <div class="chart-table-container">
-            <div class="chart-wrapper">
-                <canvas id="packageFilesChart"></canvas>
-            </div>
-            <div class="table-wrapper">
+        <h3>Distribution of metadata files</h3>
+            <p> These visualizations show the distribution of sources corresponding to the previous groups' metadatafields that were extracted by SoMEF from various sources across repositories:</p>
+                <ul>
+                  <li>Repository Information</li>
+                  <li>Software Description & Semantics</li>
+                  <li>Packaging Build & Release</li>
+                  <li>Documentation & User Guidance</li>
+                </ul>
+            <p>It should be noted that one repository can have more than one metadata source, additionally one metadata field can have multiple sources </p>
+            <h4>Repository Information</h4>
+            <div class="table-wide">
                 <table>
                     <thead>
                         <tr>
                             <th>Source</th>
                             <th>Count</th>
-                            <th>Percentage</th>
+                            <th>Percentage (%)</th>
                         </tr>
                     </thead>
-                    <tbody id="packageFilesTable">
+                    <tbody id="repoInfoSourcesTable">
                         <!-- Data will be populated by JavaScript -->
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div id="packageFilesStats" style="background-color: #f4f4f4; padding: 15px; margin: 20px 0; border-radius: 5px; border-left: 4px solid #003f5c;">
-            <p style="margin: 5px 0;"><strong>Category Total:</strong> <span id="packageFilesTotal"></span></p>
-            <p style="margin: 5px 0;"><strong>Percentage of Total Sources:</strong> <span id="packageFilesPercentage"></span></p>
-        </div>
 
-        <h3>Documentation & User Guidance Sources</h3>
-        <p>These sources include human-readable files sources (like README files of any extensions, CITATION files etc...) that provide documentation,
-            guidance, and information about the project. They are essential for understanding how to use, cite, and contribute to the software.</p>
-        <p>It should be noted in a repository, we can have README file  source appearing in multiple SoMEF categories, meaning we can find in the same repository that LICENSE
-            in mentioned in README file, Installation guide and how to cite, so we end up having one repository with the mention of README file as a source 3 times.
-            Hence why README file (with any file extension) can appear in different SoMEF categories but under the same repository</p>
-        <table id="documentationSourcesTable">
-            <thead>
-                <tr>
-                    <th>Source</th>
-                    <th>Count</th>
-                    <th>Percentage of Total Sources</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Data will be populated by JavaScript -->
-            </tbody>
-        </table>
+            <h4>Software Description & Semantics</h4>
+            <div class="table-wide">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Count</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="softwareDescSourcesTable">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
 
-        <h3>Other Sources</h3>
-        <p>This category includes data extracted from the GitHub API, automated file exploration, machine learning classification, and other specialized sources. These provide comprehensive metadata coverage beyond traditional documentation files.</p>
-        <table id="otherSourcesTable">
-            <thead>
-                <tr>
-                    <th>Source</th>
-                    <th>Count</th>
-                    <th>Percentage of Total Sources</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Data will be populated by JavaScript -->
-            </tbody>
-        </table>
-    <script>
+            <h4>Packaging Build & Release</h4>
+            <div class="table-wide">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Count</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="packagingSourcesTable">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <h4>Documentation & User Guidance</h4>
+            <div class="table-wide">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Count</th>
+                            <th>Percentage (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="documentationSourcesTable">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+        <script>
 
         const COLORS = ['#003f5c', '#7a5195', '#ef5675', '#ffa600', '#2f4b7c', '#fff1b7', '#de425b', '#ea6b5b',
         '#f6b276', '#fad293', '#abc78c', '#509d73'];
@@ -721,206 +738,94 @@
 
             // Load and process sources data
             async function loadSourcesData() {
-                try {
-                    const response = await fetch('data/sources_total.json');
-                    const data = await response.json();
-                    const grandTotal = data.grand_total;
+                    try {
+                        const response = await fetch('data/source_analysis_by_group.json');
+                        const data = await response.json();
 
-                    // Package Files - Keep as chart
-                    const packageFiles = data.sources["Package Files"];
-                    const packageLabels = Object.keys(packageFiles);
-                    const packageValues = Object.values(packageFiles);
-                    createSourceChart('packageFilesChart', packageLabels, packageValues, 'Package Files Distribution');
+                        const grandTotal = Object.values(data)
+                            .flat()
+                            .reduce((sum, row) => sum + (row.count || 0), 0);
 
-                    // Calculate and display Package Files statistics
-                    const packageTotal = packageValues.reduce((sum, val) => sum + val, 0);
-                    const packagePercentage = ((packageTotal / grandTotal) * 100).toFixed(2);
-                    document.getElementById('packageFilesTotal').textContent = packageTotal.toLocaleString();
-                    document.getElementById('packageFilesPercentage').textContent = `${packagePercentage}%`;
-
-                    // Populate Package Files table
-                    populateSourceTable('packageFilesTable', packageFiles, grandTotal);
-
-                    // Documentation & User Guidance Sources - Create table
-                    const docSources = data.sources["Documentation & User Guidance Sources"];
-                    createSourceTable('documentationSourcesTable', docSources, grandTotal);
-
-                    // Other Sources - Create table
-                    const otherSources = data.sources["Other Sources"];
-                    createSourceTable('otherSourcesTable', otherSources, grandTotal);
-                } catch (error) {
-                    console.error('Error loading sources data:', error);
-                }
-            }
-
-            // Function to populate source tables (for Package Files table next to chart)
-            function populateSourceTable(tableId, sources, grandTotal) {
-                const tbody = document.getElementById(tableId);
-                if (!tbody) return;
-
-                tbody.innerHTML = ''; // Clear existing content
-
-                // Sort sources by count (descending)
-                const sortedSources = Object.entries(sources).sort((a, b) => b[1] - a[1]);
-
-                // Populate table rows
-                sortedSources.forEach(([source, count]) => {
-                    const row = tbody.insertRow();
-
-                    // Source name
-                    const cellSource = row.insertCell(0);
-                    cellSource.textContent = source;
-
-                    // Count
-                    const cellCount = row.insertCell(1);
-                    cellCount.textContent = count.toLocaleString();
-                    cellCount.style.textAlign = 'right';
-
-                    // Percentage
-                    const cellPercentage = row.insertCell(2);
-                    const percentage = ((count / grandTotal) * 100).toFixed(2);
-                    cellPercentage.textContent = `${percentage}%`;
-                    cellPercentage.style.textAlign = 'right';
-                });
-            }
-            // Function to create source tables
-            function createSourceTable(tableId, sources, grandTotal) {
-                const tbody = document.querySelector(`#${tableId} tbody`);
-                tbody.innerHTML = ''; // Clear existing content
-
-                // Sort sources by count (descending)
-                const sortedSources = Object.entries(sources).sort((a, b) => b[1] - a[1]);
-
-                // Calculate total for this category
-                const categoryTotal = Object.values(sources).reduce((sum, val) => sum + val, 0);
-
-                // Populate table rows
-                sortedSources.forEach(([source, count]) => {
-                    const row = tbody.insertRow();
-
-                    // Source name
-                    const cellSource = row.insertCell(0);
-                    cellSource.textContent = source;
-
-                    // Count
-                    const cellCount = row.insertCell(1);
-                    cellCount.textContent = count.toLocaleString();
-                    cellCount.style.textAlign = 'right';
-
-                    // Percentage
-                    const cellPercentage = row.insertCell(2);
-                    const percentage = ((count / grandTotal) * 100).toFixed(2);
-                    cellPercentage.textContent = `${percentage}%`;
-                    cellPercentage.style.textAlign = 'right';
-                });
-
-                // Add total row
-                const totalRow = tbody.insertRow();
-                totalRow.style.fontWeight = 'bold';
-                totalRow.style.backgroundColor = '#e8e8e8';
-
-                const totalLabelCell = totalRow.insertCell(0);
-                totalLabelCell.textContent = 'Category Total';
-
-                const totalCountCell = totalRow.insertCell(1);
-                totalCountCell.textContent = categoryTotal.toLocaleString();
-                totalCountCell.style.textAlign = 'right';
-
-                const totalPercentageCell = totalRow.insertCell(2);
-                const totalPercentage = ((categoryTotal / grandTotal) * 100).toFixed(2);
-                totalPercentageCell.textContent = `${totalPercentage}%`;
-                totalPercentageCell.style.textAlign = 'right';
-            }
-
-            // Function to create source charts (counts instead of percentages)
-            function createSourceChart(canvasId, labels, values, title) {
-                const ctx = document.getElementById(canvasId).getContext('2d');
-
-                if (charts[canvasId]) {
-                    charts[canvasId].destroy();
-                }
-
-                const backgroundColors = labels.map((_, index) => COLORS[index % COLORS.length]);
-
-                charts[canvasId] = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: labels,
-                        datasets: [{
-                            label: 'Count',
-                            data: values,
-                            backgroundColor: backgroundColors,
-                            borderColor: backgroundColors.map(color => color),
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: title,
-                                font: {
-                                    size: 16,
-                                    weight: 'bold'
-                                }
+                        const groupConfig = [
+                            {
+                                groupName: "Repository Information",
+                                tableBodyId: "repoInfoSourcesTable",
+                                totalId: "repoInfoSourcesTotal",
+                                pctId: "repoInfoSourcesPercentage"
                             },
-                            legend: {
-                                display: false
+                            {
+                                groupName: "Software Description & Semantics",
+                                tableBodyId: "softwareDescSourcesTable",
+                                totalId: "softwareDescSourcesTotal",
+                                pctId: "softwareDescSourcesPercentage"
                             },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        const count = context.parsed.y;
-                                        return `Count: ${count.toLocaleString()}`;
-                                    }
-                                }
+                            {
+                                groupName: "Packaging Build & Release",
+                                tableBodyId: "packagingSourcesTable",
+                                totalId: "packagingSourcesTotal",
+                                pctId: "packagingSourcesPercentage"
+                            },
+                            {
+                                groupName: "Documentation & User Guidance",
+                                tableBodyId: "documentationSourcesTable",
+                                totalId: "documentationSourcesTotal",
+                                pctId: "documentationSourcesPercentage"
                             }
-                        },
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Count',
-                                    font: {
-                                        size: 12,
-                                        weight: 'bold'
-                                    }
-                                },
-                                ticks: {
-                                    callback: function(value) {
-                                        return value.toLocaleString();
-                                    }
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Source Type',
-                                    font: {
-                                        size: 12,
-                                        weight: 'bold'
-                                    }
-                                },
-                                ticks: {
-                                    autoSkip: false,
-                                    maxRotation: 45,
-                                    minRotation: 45
-                                }
-                            }
-                        }
+                        ];
+
+                        groupConfig.forEach(cfg => {
+                            const rows = Array.isArray(data[cfg.groupName]) ? data[cfg.groupName] : [];
+
+                            // Sort by count descending
+                            const sorted = [...rows].sort((a, b) => (b.count || 0) - (a.count || 0));
+
+                            const values = sorted.map(r => r.count);
+
+                            const categoryTotal = values.reduce((s, v) => s + v, 0);
+                            const categoryPctOfTotal = grandTotal > 0 ? ((categoryTotal / grandTotal) * 100) : 0;
+
+                            const totalEl = document.getElementById(cfg.totalId);
+                            const pctEl = document.getElementById(cfg.pctId);
+                            if (totalEl) totalEl.textContent = categoryTotal.toLocaleString();
+                            if (pctEl) pctEl.textContent = `${categoryPctOfTotal.toFixed(2)}%`;
+
+                            populateSourceRowsFromJson(cfg.tableBodyId, sorted);
+                        });
+                    } catch (error) {
+                        console.error('Error loading source analysis by group data:', error);
                     }
-                });
-            }
+                }
 
-            window.addEventListener('DOMContentLoaded', function() {
-                loadRQ3Data();
-                loadRQ4Data();
-                loadRQ5Data();
-                loadSourcesData();
-                loadTreemapData();
-            });
+                // Fill table body using rows from source_analysis_by_group.json
+                function populateSourceRowsFromJson(tableBodyId, rows) {
+                    const tbody = document.getElementById(tableBodyId);
+                    if (!tbody) return;
+
+                    tbody.innerHTML = '';
+
+                    rows.forEach(r => {
+                        const row = tbody.insertRow();
+
+                        const cellSource = row.insertCell(0);
+                        cellSource.textContent = r.source;
+
+                        const cellCount = row.insertCell(1);
+                        cellCount.textContent = (r.count ?? 0).toLocaleString();
+                        cellCount.style.textAlign = 'right';
+
+                        const cellPct = row.insertCell(2);
+                        cellPct.textContent = `${(r.percentage ?? 0).toFixed(2)}%`;
+                        cellPct.style.textAlign = 'right';
+                    });
+                }
+
+                window.addEventListener('DOMContentLoaded', function() {
+                    loadRQ3Data();
+                    loadRQ4Data();
+                    loadRQ5Data();
+                    loadSourcesData();
+                    loadTreemapData();
+                });
 
         async function loadTreemapData() {
             try {
@@ -1048,7 +953,7 @@
                         .attr("stroke", "#000")
                         .attr("stroke-width", 2.5);
 
-                    const path = d.ancestors().reverse().map(n => n.data.name).slice(1).join(" → ");
+                    const path = d.ancestors().reverse().map(n => n.data.name).slice(1).join(" â†' ");
 
                     tooltip
                         .style("opacity", 1)
