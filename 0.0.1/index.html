@@ -952,7 +952,7 @@
                             <strong>${d.data.name}</strong><br/>
                             Path: ${path}<br/>
                             Count: ${d.value.toLocaleString()} repositories<br/>
-                            Percentage: ${((d.value / 40645) * 100).toFixed(2)}%
+                            Percentage: ${((d.value / 370684) * 100).toFixed(2)}%
                         `)
                         .style("left", (event.pageX + 10) + "px")
                         .style("top", (event.pageY - 10) + "px");
@@ -1058,7 +1058,7 @@
                 .attr("y", d => {
                     return Math.max(14, (d.y1 - d.y0) - 6);
                 })
-                .text(d => `${((d.value / 40645) * 100).toFixed(1)}%`)
+                .text(d => `${((d.value / 370684) * 100).toFixed(1)}%`)
                 .attr("font-size", "10px")
                 .attr("fill", function(d) {
                     const color = getColor(d);
