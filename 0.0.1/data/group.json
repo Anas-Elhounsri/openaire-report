@@ -1,99 +1,93 @@
 {
   "Repository Information": {
     "Repository Identification": {
-      "name": 40645,
-      "full_name": 40645,
-      "identifier": 1414,
-      "full_title": 28969,
-      "code_repository": 40645,
-      "owner": 40645
+      "name": 370684,
+      "full_name": 370684,
+      "identifier": 13092,
+      "full_title": 265155,
+      "code_repository": 370684,
+      "owner": 370684
     },
     "Web Sources": {
-      "homepage": 5556,
-      "download_url": 40645,
-      "readme_url": 36306
+      "homepage": 52109,
+      "download_url": 370684,
+      "readme_url": 336280
     },
     "Repository Activity and Popularity": {
-      "stargazers_count": 28859,
-      "forks_count": 22915,
-      "issue_tracker": 40645,
-      "repository_status": 54,
-      "date_created": 40645,
-      "date_updated": 40645
+      "stargazers_count": 265907,
+      "forks_count": 211655,
+      "issue_tracker": 370684,
+      "repository_status": 582,
+      "date_created": 370684,
+      "date_updated": 370684,
+      "forks_url": 370684
     }
   },
-
   "Software Description & Semantics": {
     "General Description": {
-      "description": 35953,
-      "type": 10568,
-      "application_domain": 7548,
-      "programming_languages": 36813,
-      "keywords": 8346
+      "description": 333631,
+      "type": 98209,
+      "application_domain": 70305,
+      "programming_languages": 339724,
+      "keywords": 76859
     },
     "Scholarly Context": {
-      "citation": 9110,
-      "related_papers": 4475,
+      "citation": 84217,
+      "related_papers": 41212,
       "reference_publication": 3,
-      "development_status": 28,
-      "date_published": 22
+      "development_status": 235,
+      "date_published": 248
     },
     "Visual Elements": {
-      "logo": 2373,
-      "images": 8306
+      "logo": 22111,
+      "images": 78376
     }
   },
-
   "Packaging Build & Release": {
     "Packages": {
-      "has_package_file": 5525,
-      "package_id": 7657,
-      "package_distribution": 1016,
-      "version": 4375
+      "has_package_file": 51038,
+      "package_id": 70862,
+      "package_distribution": 9309,
+      "version": 40355
     },
-
     "Build & Dependencies": {
-      "has_build_file": 12998,
-      "requirements": 12824,
-      "runtime_platform": 1717,
-      "continuous_integration": 3265
+      "has_build_file": 120290,
+      "requirements": 118637,
+      "runtime_platform": 20754,
+      "continuous_integration": 31788
     },
-
     "Release Management": {
-      "releases": 8846,
-      "download": 1221
+      "releases": 83274,
+      "download": 11685
     },
-
     "Code & File Artifacts": {
-      "has_script_file": 9183,
-      "ontologies": 167,
-      "workflows": 259
+      "has_script_file": 85169,
+      "ontologies": 1585,
+      "workflows": 2470
     }
   },
-
   "Documentation & User Guidance": {
     "Usage and Installation": {
-      "installation": 10805,
-      "usage": 10944,
-      "run": 3923
+      "installation": 99498,
+      "usage": 100588,
+      "run": 37254
     },
-
     "Extended Documentation": {
-      "documentation": 5489,
-      "related_documentation": 1125,
-      "executable_example": 6482,
-      "faq": 692
+      "documentation": 50587,
+      "related_documentation": 10523,
+      "executable_example": 59404,
+      "faq": 6355
     },
-
     "Community & Governance": {
-      "contributing_guidelines": 2770,
-      "code_of_conduct": 927,
-      "support": 1548,
-      "support_channels": 43,
-      "acknowledgement": 1969,
-      "contributors": 727,
-      "authors": 4791,
-      "contact": 1657
+      "contributing_guidelines": 26570,
+      "code_of_conduct": 9070,
+      "support": 14743,
+      "support_channels": 456,
+      "acknowledgement": 18602,
+      "contributors": 6742,
+      "authors": 45375,
+      "contact": 14939,
+      "license": 207761
     }
   }
 }

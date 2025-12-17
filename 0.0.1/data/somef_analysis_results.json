@@ -1,471 +1,548 @@
 {
   "code_repository": {
-    "count": 40645,
+    "count": 370684,
     "sources": {
-      "GitHub_API": 40645,
-      "setup.py": 2175,
-      "DESCRIPTION": 598,
-      "package.json": 694,
-      "Cargo.toml": 55,
-      "pyproject.toml": 388,
-      "codemeta.json": 54,
-      "Setup.py": 1
+      "GitHub_API": 370684,
+      "setup.py": 19889,
+      "DESCRIPTION": 5536,
+      "package.json": 6342,
+      "Cargo.toml": 547,
+      "pyproject.toml": 4044,
+      "codemeta.json": 517,
+      "Setup.py": 7,
+      "Codemeta.json": 1
     }
   },
   "owner": {
-    "count": 40645,
+    "count": 370684,
     "sources": {
-      "GitHub_API": 40645
+      "GitHub_API": 370684
     }
   },
   "date_created": {
-    "count": 40645,
+    "count": 370684,
     "sources": {
-      "GitHub_API": 40645,
-      "codemeta.json": 22
+      "GitHub_API": 370684,
+      "codemeta.json": 251,
+      "Codemeta.json": 1
     }
   },
   "date_updated": {
-    "count": 40645,
+    "count": 370684,
     "sources": {
-      "GitHub_API": 40645,
-      "codemeta.json": 22
+      "GitHub_API": 370684,
+      "codemeta.json": 233
     }
   },
   "description": {
-    "count": 35953,
+    "count": 333631,
     "sources": {
-      "GitHub_API": 28937,
-      "README": 28357,
-      "DESCRIPTION": 1625,
-      "setup.py": 2556,
-      "package.json": 952,
-      "Cargo.toml": 63,
-      "pyproject.toml": 973,
-      "bower.json": 105,
-      "composer.json": 68,
-      "codemeta.json": 53,
-      ".gemspec": 5,
-      "latest": 1,
-      "Setup.py": 1
+      "GitHub_API": 268884,
+      "README": 263239,
+      "DESCRIPTION": 15003,
+      "setup.py": 23356,
+      "package.json": 8671,
+      "Cargo.toml": 604,
+      "pyproject.toml": 9622,
+      "bower.json": 845,
+      "composer.json": 580,
+      "codemeta.json": 518,
+      ".gemspec": 72,
+      "latest": 2,
+      "Setup.py": 6,
+      "Codemeta.json": 1,
+      "gtomo": 1,
+      "elabftw": 1,
+      "README.": 1,
+      "doc": 1,
+      "FairMQ": 1,
+      "gLike": 1
     }
   },
   "name": {
-    "count": 40645,
+    "count": 370684,
     "sources": {
-      "GitHub_API": 40645,
-      "bower.json": 151,
-      "codemeta.json": 45
+      "GitHub_API": 370684,
+      "bower.json": 1283,
+      "codemeta.json": 412,
+      "Codemeta.json": 1
     }
   },
   "full_name": {
-    "count": 40645,
+    "count": 370684,
     "sources": {
-      "GitHub_API": 40645
+      "GitHub_API": 370684
     }
   },
   "issue_tracker": {
-    "count": 40645,
+    "count": 370684,
     "sources": {
-      "GitHub_API": 40645,
-      "package.json": 426,
-      "pyproject.toml": 245,
-      "DESCRIPTION": 575,
-      "pom.xml": 83,
-      "codemeta.json": 32
+      "GitHub_API": 370684,
+      "package.json": 3698,
+      "pyproject.toml": 2491,
+      "DESCRIPTION": 5375,
+      "pom.xml": 647,
+      "codemeta.json": 334,
+      "Codemeta.json": 1
     }
   },
   "forks_url": {
-    "count": 40645,
+    "count": 370684,
     "sources": {
-      "GitHub_API": 40645
+      "GitHub_API": 370684
     }
   },
   "stargazers_count": {
-    "count": 28859,
+    "count": 265907,
     "sources": {
-      "GitHub_API": 28859
+      "GitHub_API": 265907
     }
   },
   "homepage": {
-    "count": 5556,
+    "count": 52109,
     "sources": {
-      "GitHub_API": 4885,
-      "DESCRIPTION": 248,
-      "package.json": 485,
-      "pyproject.toml": 514,
-      "bower.json": 92,
-      "composer.json": 31,
-      ".gemspec": 5
-    }
-  },
-  "download_url": {
-    "count": 40645,
-    "sources": {
-      "GitHub_API": 40645,
-      "pyproject.toml": 17,
-      "codemeta.json": 11
-    }
-  },
-  "programming_languages": {
-    "count": 36813,
-    "sources": {
-      "GitHub_API": 36811,
-      "setup.py": 1353,
-      "codemeta.json": 44
-    }
-  },
-  "releases": {
-    "count": 8846,
-    "sources": {
-      "GitHub_API": 8846
-    }
-  },
-  "readme_url": {
-    "count": 36306,
-    "sources": {
-      "file_exploration": 36306,
-      "codemeta.json": 20
-    }
-  },
-  "license": {
-    "count": 22378,
-    "sources": {
-      "GitHub_API": 17671,
-      "LICENSE": 18526,
-      "README": 3813,
-      "DESCRIPTION": 1618,
-      "package.json": 903,
-      "Cargo.toml": 64,
-      "setup.py": 1775,
-      "pyproject.toml": 510,
-      "bower.json": 103,
-      "composer.json": 68,
-      "codemeta.json": 52,
-      "file_exploration": 18,
-      ".gemspec": 3,
-      "Setup.py": 1
-    }
-  },
-  "keywords": {
-    "count": 8346,
-    "sources": {
-      "GitHub_API": 7411,
-      "setup.py": 900,
-      "Cargo.toml": 34,
-      "package.json": 441,
-      "pyproject.toml": 252,
-      "bower.json": 75,
-      "composer.json": 41,
-      "codemeta.json": 40
-    }
-  },
-  "forks_count": {
-    "count": 22915,
-    "sources": {
-      "GitHub_API": 22915
-    }
-  },
-  "has_build_file": {
-    "count": 12998,
-    "sources": {
-      "requirements.txt": 5942,
-      "pyproject.toml": 1607,
-      "setup.py": 4155,
-      "DESCRIPTION": 1647,
-      "pom.xml": 800,
-      "Dockerfile": 2253,
-      "docker-compose.yml": 485,
-      "package.json": 1415,
-      "Cargo.toml": 157,
-      "composer.json": 82,
-      "bower.json": 151,
-      ".gemspec": 74,
-      "Setup.py": 3
-    }
-  },
-  "requirements": {
-    "count": 12824,
-    "sources": {
-      "requirements.txt": 5833,
-      "README": 6343,
-      "pyproject.toml": 1431,
-      "pom.xml": 634,
-      "package.json": 1311,
-      "Cargo.toml": 99,
-      "composer.json": 80,
-      "bower.json": 93,
-      "codemeta.json": 12,
-      ".gemspec": 4,
-      "latest": 1
-    }
-  },
-  "usage": {
-    "count": 10944,
-    "sources": {
-      "README": 10944
-    }
-  },
-  "citation": {
-    "count": 9110,
-    "sources": {
-      "README": 8425,
-      "CITATION": 362,
-      ".cff": 668,
-      "file_exploration": 52,
-      ".bib": 66,
-      "latest": 1,
-      "codemeta.json": 4
-    }
-  },
-  "application_domain": {
-    "count": 7548,
-    "sources": {
-      "supervised_classification": 7538,
-      "codemeta.json": 16
-    }
-  },
-  "logo": {
-    "count": 2373,
-    "sources": {
-      "README": 2372,
-      "latest": 1
-    }
-  },
-  "images": {
-    "count": 8306,
-    "sources": {
-      "README": 8306
-    }
-  },
-  "type": {
-    "count": 10568,
-    "sources": {
-      "software_type_heuristics": 10568
-    }
-  },
-  "identifier": {
-    "count": 1414,
-    "sources": {
-      "README": 1392,
-      "codemeta.json": 37,
-      "latest": 1
-    }
-  },
-  "full_title": {
-    "count": 28969,
-    "sources": {
-      "README": 28968,
-      "latest": 1
-    }
-  },
-  "documentation": {
-    "count": 5489,
-    "sources": {
-      "file_exploration": 2199,
-      "README": 3905,
-      "pyproject.toml": 278,
-      "latest": 1
-    }
-  },
-  "executable_example": {
-    "count": 6482,
-    "sources": {
-      ".ipynb": 6406,
-      "README": 245,
-      "INSTALL": 25,
-      "latest": 1,
-      "LICENSE": 1,
-      "Acknowledgments": 1
-    }
-  },
-  "has_script_file": {
-    "count": 9183,
-    "sources": {
-      "file_exploration": 9183
-    }
-  },
-  "related_documentation": {
-    "count": 1125,
-    "sources": {
-      "README": 979,
-      "pyproject.toml": 169
-    }
-  },
-  "related_papers": {
-    "count": 4475,
-    "sources": {
-      "README": 4475
-    }
-  },
-  "contact": {
-    "count": 1657,
-    "sources": {
-      "README": 1657
-    }
-  },
-  "installation": {
-    "count": 10805,
-    "sources": {
-      "README": 10442,
-      "INSTALL": 758,
-      "latest": 1,
-      "file_exploration": 1
-    }
-  },
-  "run": {
-    "count": 3923,
-    "sources": {
-      "README": 3923
-    }
-  },
-  "support": {
-    "count": 1548,
-    "sources": {
-      "README": 1548
-    }
-  },
-  "has_package_file": {
-    "count": 5525,
-    "sources": {
-      "pyproject.toml": 1607,
-      "DESCRIPTION": 1647,
-      "pom.xml": 790,
-      "package.json": 1410,
-      "Cargo.toml": 157,
-      "composer.json": 82,
-      "bower.json": 151,
+      "GitHub_API": 46061,
+      "DESCRIPTION": 2501,
+      "package.json": 4416,
+      "pyproject.toml": 5002,
+      "bower.json": 769,
+      "composer.json": 313,
       ".gemspec": 74
     }
   },
-  "continuous_integration": {
-    "count": 3265,
+  "download_url": {
+    "count": 370684,
     "sources": {
-      "file_exploration": 3255,
-      "codemeta.json": 20
+      "GitHub_API": 370684,
+      "pyproject.toml": 227,
+      "codemeta.json": 106
     }
   },
-  "package_id": {
-    "count": 7657,
+  "programming_languages": {
+    "count": 339724,
     "sources": {
-      "DESCRIPTION": 1632,
-      "pom.xml": 790,
-      "package.json": 1331,
-      "setup.py": 3050,
-      "Cargo.toml": 104,
-      "pyproject.toml": 1034,
-      "composer.json": 73,
-      ".gemspec": 5,
+      "GitHub_API": 339705,
+      "setup.py": 12162,
+      "codemeta.json": 390,
+      "Codemeta.json": 1,
+      "Setup.py": 3
+    }
+  },
+  "releases": {
+    "count": 83274,
+    "sources": {
+      "GitHub_API": 83274
+    }
+  },
+  "readme_url": {
+    "count": 336280,
+    "sources": {
+      "file_exploration": 336280,
+      "codemeta.json": 205,
+      "pyproject.toml": 4
+    }
+  },
+  "license": {
+    "count": 207761,
+    "sources": {
+      "GitHub_API": 164233,
+      "LICENSE": 172308,
+      "README": 36256,
+      "DESCRIPTION": 14944,
+      "package.json": 8254,
+      "Cargo.toml": 582,
+      "setup.py": 16099,
+      "pyproject.toml": 5235,
+      "bower.json": 847,
+      "composer.json": 579,
+      "codemeta.json": 506,
+      "file_exploration": 180,
+      ".gemspec": 50,
+      "Setup.py": 2,
+      "Codemeta.json": 1,
+      "doc": 1
+    }
+  },
+  "keywords": {
+    "count": 76859,
+    "sources": {
+      "GitHub_API": 68220,
+      "setup.py": 8055,
+      "Cargo.toml": 372,
+      "package.json": 3944,
+      "pyproject.toml": 2600,
+      "bower.json": 643,
+      "composer.json": 416,
+      "codemeta.json": 401,
+      "Codemeta.json": 1,
       "Setup.py": 1
     }
   },
-  "version": {
-    "count": 4375,
+  "forks_count": {
+    "count": 211655,
     "sources": {
-      "DESCRIPTION": 1637,
-      "pom.xml": 772,
-      "package.json": 1255,
-      "Cargo.toml": 104,
-      "pyproject.toml": 684,
-      "bower.json": 100,
-      "codemeta.json": 50,
-      "composer.json": 4
+      "GitHub_API": 211655
+    }
+  },
+  "has_build_file": {
+    "count": 120290,
+    "sources": {
+      "requirements.txt": 54764,
+      "pyproject.toml": 15379,
+      "setup.py": 38688,
+      "DESCRIPTION": 15191,
+      "pom.xml": 6715,
+      "docker-compose.yml": 4684,
+      "package.json": 13389,
+      "Dockerfile": 21635,
+      "Cargo.toml": 1541,
+      "composer.json": 693,
+      "bower.json": 1293,
+      ".gemspec": 693,
+      "Setup.py": 33,
+      "setUp.py": 1,
+      "Docker-compose.yml": 2,
+      "cargo.toml": 1,
+      "Package.json": 1,
+      "LICENSE": 1,
+      "Project.toml": 140
+    }
+  },
+  "requirements": {
+    "count": 118637,
+    "sources": {
+      "requirements.txt": 53785,
+      "README": 58691,
+      "pyproject.toml": 13778,
+      "pom.xml": 5328,
+      "package.json": 12450,
+      "Cargo.toml": 1026,
+      "composer.json": 639,
+      "bower.json": 766,
+      "codemeta.json": 138,
+      ".gemspec": 56,
+      "latest": 1,
+      "FairMQ": 1,
+      "gLike": 1,
+      "Project.toml": 139
+    }
+  },
+  "usage": {
+    "count": 100588,
+    "sources": {
+      "README": 100582,
+      "gtomo": 1,
+      "doc": 1,
+      "FairMQ": 1,
+      "gLike": 1
+    }
+  },
+  "citation": {
+    "count": 84217,
+    "sources": {
+      "README": 78214,
+      "CITATION": 3200,
+      ".cff": 6219,
+      "file_exploration": 447,
+      ".bib": 706,
+      "codemeta.json": 74,
+      "latest": 1,
+      "Citation": 8,
+      "citation": 13
+    }
+  },
+  "application_domain": {
+    "count": 70305,
+    "sources": {
+      "supervised_classification": 70210,
+      "codemeta.json": 150,
+      "Codemeta.json": 1
+    }
+  },
+  "logo": {
+    "count": 22111,
+    "sources": {
+      "README": 22106,
+      "latest": 1,
+      "doc": 1,
+      "gLike": 1
+    }
+  },
+  "images": {
+    "count": 78376,
+    "sources": {
+      "README": 78372,
+      "gtomo": 1,
+      "doc": 1
+    }
+  },
+  "type": {
+    "count": 98209,
+    "sources": {
+      "software_type_heuristics": 98209
+    }
+  },
+  "identifier": {
+    "count": 13092,
+    "sources": {
+      "README": 12740,
+      "codemeta.json": 397,
+      "latest": 2,
+      "gtomo": 1,
+      "FairMQ": 1,
+      "gLike": 1,
+      "Project.toml": 131
+    }
+  },
+  "full_title": {
+    "count": 265155,
+    "sources": {
+      "README": 265150,
+      "latest": 2,
+      "README.": 1,
+      "doc": 1,
+      "FairMQ": 1
+    }
+  },
+  "documentation": {
+    "count": 50587,
+    "sources": {
+      "file_exploration": 20782,
+      "README": 35727,
+      "pyproject.toml": 2912,
+      "latest": 2,
+      "elabftw": 1,
+      "doc": 1,
+      "FairMQ": 1,
+      "gLike": 1
+    }
+  },
+  "executable_example": {
+    "count": 59404,
+    "sources": {
+      ".ipynb": 58750,
+      "README": 2241,
+      "INSTALL": 165,
+      "latest": 1,
+      "LICENSE": 2,
+      "Acknowledgments": 7,
+      "CONTRIBUTORS": 1
+    }
+  },
+  "has_script_file": {
+    "count": 85169,
+    "sources": {
+      "file_exploration": 85169
+    }
+  },
+  "related_documentation": {
+    "count": 10523,
+    "sources": {
+      "README": 9052,
+      "pyproject.toml": 1758,
+      "FairMQ": 1
+    }
+  },
+  "related_papers": {
+    "count": 41212,
+    "sources": {
+      "README": 41211,
+      "doc": 1
+    }
+  },
+  "contact": {
+    "count": 14939,
+    "sources": {
+      "README": 14939
+    }
+  },
+  "installation": {
+    "count": 99498,
+    "sources": {
+      "README": 95989,
+      "INSTALL": 7002,
+      "latest": 1,
+      "file_exploration": 8,
+      "elabftw": 1,
+      "FairMQ": 1,
+      "gLike": 1
+    }
+  },
+  "run": {
+    "count": 37254,
+    "sources": {
+      "README": 37252,
+      "doc": 1,
+      "latest": 1
+    }
+  },
+  "support": {
+    "count": 14743,
+    "sources": {
+      "README": 14742,
+      "elabftw": 1
+    }
+  },
+  "has_package_file": {
+    "count": 51038,
+    "sources": {
+      "pyproject.toml": 15379,
+      "DESCRIPTION": 15191,
+      "pom.xml": 6603,
+      "package.json": 13333,
+      "Cargo.toml": 1541,
+      "composer.json": 693,
+      "bower.json": 1293,
+      ".gemspec": 693,
+      "Package.json": 1,
+      "LICENSE": 1,
+      "Project.toml": 140
+    }
+  },
+  "continuous_integration": {
+    "count": 31788,
+    "sources": {
+      "file_exploration": 31664,
+      "codemeta.json": 192,
+      "Codemeta.json": 1
+    }
+  },
+  "package_id": {
+    "count": 70862,
+    "sources": {
+      "DESCRIPTION": 15042,
+      "pom.xml": 6596,
+      "setup.py": 28242,
+      "package.json": 12397,
+      "Cargo.toml": 1064,
+      "pyproject.toml": 10295,
+      "composer.json": 612,
+      ".gemspec": 77,
+      "Setup.py": 7,
+      "Project.toml": 131
+    }
+  },
+  "version": {
+    "count": 40355,
+    "sources": {
+      "DESCRIPTION": 15086,
+      "pom.xml": 6419,
+      "package.json": 11769,
+      "Cargo.toml": 1063,
+      "pyproject.toml": 6745,
+      "bower.json": 816,
+      "codemeta.json": 489,
+      "composer.json": 28,
+      "Project.toml": 129
     }
   },
   "authors": {
-    "count": 4791,
+    "count": 45375,
     "sources": {
-      "DESCRIPTION": 446,
-      "package.json": 681,
-      "setup.py": 2060,
-      "Cargo.toml": 80,
-      "AUTHORS": 480,
-      "pyproject.toml": 924,
-      "pom.xml": 188,
-      ".txt": 106,
-      "authors": 7,
-      "file_exploration": 27,
-      "composer.json": 43,
-      "codemeta.json": 47,
-      ".md": 55,
-      ".gemspec": 5
+      "DESCRIPTION": 4317,
+      "setup.py": 18976,
+      "package.json": 6291,
+      "Cargo.toml": 806,
+      "AUTHORS": 4590,
+      "pyproject.toml": 9226,
+      "pom.xml": 1678,
+      ".txt": 863,
+      "authors": 50,
+      "file_exploration": 264,
+      "composer.json": 392,
+      "codemeta.json": 483,
+      ".md": 480,
+      ".gemspec": 73,
+      "Authors": 10,
+      "Setup.py": 5,
+      "Project.toml": 105,
+      "bower.json": 17
     }
   },
   "contributing_guidelines": {
-    "count": 2770,
+    "count": 26570,
     "sources": {
-      "README": 1323,
-      ".md": 1899,
-      "CONTRIBUTING": 28
+      "README": 12906,
+      ".md": 18100,
+      "CONTRIBUTING": 244,
+      "elabftw": 1,
+      "file_exploration": 4,
+      "contributing": 1
     }
   },
   "runtime_platform": {
-    "count": 1717,
+    "count": 20754,
     "sources": {
-      "requirements.txt": 718,
-      "package.json": 227,
-      "pyproject.toml": 605,
-      "pom.xml": 228
+      "requirements.txt": 8812,
+      "package.json": 2623,
+      "pyproject.toml": 7573,
+      "pom.xml": 2319,
+      "Project.toml": 119
     }
   },
   "package_distribution": {
-    "count": 1016,
+    "count": 9309,
     "sources": {
-      "README": 630,
-      "pom.xml": 392
+      "README": 6106,
+      "pom.xml": 3250
     }
   },
   "contributors": {
-    "count": 727,
+    "count": 6742,
     "sources": {
-      "CONTRIBUTORS": 246,
-      "README": 490,
-      "file_exploration": 2
+      "CONTRIBUTORS": 2229,
+      "README": 4661,
+      "file_exploration": 7,
+      "gtomo": 1,
+      "elabftw": 1
     }
   },
   "acknowledgement": {
-    "count": 1969,
+    "count": 18602,
     "sources": {
-      "README": 1931,
-      "Acknowledgments": 44,
-      "file_exploration": 3
+      "README": 18220,
+      "Acknowledgments": 424,
+      "file_exploration": 22,
+      "gtomo": 1
     }
   },
   "download": {
-    "count": 1221,
+    "count": 11685,
     "sources": {
-      "README": 1221
+      "README": 11685
     }
   },
   "code_of_conduct": {
-    "count": 927,
+    "count": 9070,
     "sources": {
-      ".md": 924,
-      "CODE_OF_CONDUCT": 3
+      ".md": 9047,
+      "CODE_OF_CONDUCT": 22,
+      "code_of_conduct": 1
     }
   },
   "ontologies": {
-    "count": 167,
+    "count": 1585,
     "sources": {
-      "file_exploration": 167
+      "file_exploration": 1585
     }
   },
   "faq": {
-    "count": 692,
+    "count": 6355,
     "sources": {
-      "README": 692
+      "README": 6355
     }
   },
   "workflows": {
-    "count": 259,
+    "count": 2470,
     "sources": {
-      "file_exploration": 259
+      "file_exploration": 2470
     }
   },
   "date_published": {
-    "count": 22,
+    "count": 248,
     "sources": {
-      "codemeta.json": 22
+      "codemeta.json": 247,
+      "Codemeta.json": 1
     }
   },
   "reference_publication": {
@@ -475,21 +552,21 @@
     }
   },
   "development_status": {
-    "count": 28,
+    "count": 235,
     "sources": {
-      "codemeta.json": 28
+      "codemeta.json": 235
     }
   },
   "repository_status": {
-    "count": 54,
+    "count": 582,
     "sources": {
-      "README": 54
+      "README": 582
     }
   },
   "support_channels": {
-    "count": 43,
+    "count": 456,
     "sources": {
-      "README": 43
+      "README": 456
     }
   }
 }

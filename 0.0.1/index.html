@@ -507,7 +507,6 @@
                     <thead>
                         <tr>
                             <th>Source</th>
-                            <th>Count</th>
                             <th>Percentage (%)</th>
                         </tr>
                     </thead>
@@ -523,7 +522,6 @@
                     <thead>
                         <tr>
                             <th>Source</th>
-                            <th>Count</th>
                             <th>Percentage (%)</th>
                         </tr>
                     </thead>
@@ -539,7 +537,6 @@
                     <thead>
                         <tr>
                             <th>Source</th>
-                            <th>Count</th>
                             <th>Percentage (%)</th>
                         </tr>
                     </thead>
@@ -555,7 +552,6 @@
                     <thead>
                         <tr>
                             <th>Source</th>
-                            <th>Count</th>
                             <th>Percentage (%)</th>
                         </tr>
                     </thead>
@@ -646,7 +642,7 @@
             try {
                 const response = await fetch('data/rq3_results.json');
                 const data = await response.json();
-                const rq3Data = data['46779'];
+                const rq3Data = data['openaire'];
 
                 const rq3_1 = rq3Data['rq3-1'];
                 const labels_1 = Object.keys(rq3_1);
@@ -669,7 +665,7 @@
             try {
                 const response = await fetch('data/rq4_results.json');
                 const data = await response.json();
-                const rq4Data = data['46779'];
+                const rq4Data = data['openaire'];
 
                 const rq4_1 = rq4Data['rq4-1'];
                 const labels_1 = Object.keys(rq4_1);
@@ -698,7 +694,7 @@
                 try {
                     const response = await fetch('data/rq5_results.json');
                     const data = await response.json();
-                    const rq5Data = data['46779'];
+                    const rq5Data = data['openaire'];
 
                     const labels = Object.keys(rq5Data);
                     const values = Object.values(rq5Data);
@@ -809,11 +805,7 @@
                         const cellSource = row.insertCell(0);
                         cellSource.textContent = r.source;
 
-                        const cellCount = row.insertCell(1);
-                        cellCount.textContent = (r.count ?? 0).toLocaleString();
-                        cellCount.style.textAlign = 'right';
-
-                        const cellPct = row.insertCell(2);
+                        const cellPct = row.insertCell(1);
                         cellPct.textContent = `${(r.percentage ?? 0).toFixed(2)}%`;
                         cellPct.style.textAlign = 'right';
                     });
@@ -826,7 +818,6 @@
                     loadSourcesData();
                     loadTreemapData();
                 });
-
         async function loadTreemapData() {
             try {
                 const response = await fetch('data/group.json');
