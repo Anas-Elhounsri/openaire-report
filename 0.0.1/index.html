@@ -944,7 +944,7 @@
                         .attr("stroke", "#000")
                         .attr("stroke-width", 2.5);
 
-                    const path = d.ancestors().reverse().map(n => n.data.name).slice(1).join(" â†' ");
+                    const path = d.ancestors().reverse().map(n => n.data.name).slice(1).join(" → ");
 
                     tooltip
                         .style("opacity", 1)
