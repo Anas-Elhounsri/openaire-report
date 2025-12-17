@@ -806,7 +806,7 @@
                         cellSource.textContent = r.source;
 
                         const cellPct = row.insertCell(1);
-                        cellPct.textContent = `${(r.percentage ?? 0).toFixed(2)}%`;
+                        cellPct.textContent = `${(r.percentage ?? 0).toFixed(4)}%`;
                         cellPct.style.textAlign = 'right';
                     });
                 }

@@ -48,15 +48,10 @@
       "composer.json": 580,
       "codemeta.json": 518,
       ".gemspec": 72,
-      "latest": 2,
       "Setup.py": 6,
       "Codemeta.json": 1,
-      "gtomo": 1,
       "elabftw": 1,
-      "README.": 1,
-      "doc": 1,
-      "FairMQ": 1,
-      "gLike": 1
+      "doc": 1
     }
   },
   "name": {
@@ -221,9 +216,6 @@
       "bower.json": 766,
       "codemeta.json": 138,
       ".gemspec": 56,
-      "latest": 1,
-      "FairMQ": 1,
-      "gLike": 1,
       "Project.toml": 139
     }
   },
@@ -231,10 +223,7 @@
     "count": 100588,
     "sources": {
       "README": 100582,
-      "gtomo": 1,
-      "doc": 1,
-      "FairMQ": 1,
-      "gLike": 1
+      "doc": 1
     }
   },
   "citation": {
@@ -246,7 +235,6 @@
       "file_exploration": 447,
       ".bib": 706,
       "codemeta.json": 74,
-      "latest": 1,
       "Citation": 8,
       "citation": 13
     }
@@ -263,16 +251,13 @@
     "count": 22111,
     "sources": {
       "README": 22106,
-      "latest": 1,
-      "doc": 1,
-      "gLike": 1
+      "doc": 1
     }
   },
   "images": {
     "count": 78376,
     "sources": {
       "README": 78372,
-      "gtomo": 1,
       "doc": 1
     }
   },
@@ -287,10 +272,6 @@
     "sources": {
       "README": 12740,
       "codemeta.json": 397,
-      "latest": 2,
-      "gtomo": 1,
-      "FairMQ": 1,
-      "gLike": 1,
       "Project.toml": 131
     }
   },
@@ -298,10 +279,7 @@
     "count": 265155,
     "sources": {
       "README": 265150,
-      "latest": 2,
-      "README.": 1,
-      "doc": 1,
-      "FairMQ": 1
+      "doc": 1
     }
   },
   "documentation": {
@@ -310,11 +288,8 @@
       "file_exploration": 20782,
       "README": 35727,
       "pyproject.toml": 2912,
-      "latest": 2,
       "elabftw": 1,
-      "doc": 1,
-      "FairMQ": 1,
-      "gLike": 1
+      "doc": 1
     }
   },
   "executable_example": {
@@ -323,7 +298,6 @@
       ".ipynb": 58750,
       "README": 2241,
       "INSTALL": 165,
-      "latest": 1,
       "LICENSE": 2,
       "Acknowledgments": 7,
       "CONTRIBUTORS": 1
@@ -339,8 +313,7 @@
     "count": 10523,
     "sources": {
       "README": 9052,
-      "pyproject.toml": 1758,
-      "FairMQ": 1
+      "pyproject.toml": 1758
     }
   },
   "related_papers": {
@@ -361,19 +334,15 @@
     "sources": {
       "README": 95989,
       "INSTALL": 7002,
-      "latest": 1,
       "file_exploration": 8,
-      "elabftw": 1,
-      "FairMQ": 1,
-      "gLike": 1
+      "elabftw": 1
     }
   },
   "run": {
     "count": 37254,
     "sources": {
       "README": 37252,
-      "doc": 1,
-      "latest": 1
+      "doc": 1
     }
   },
   "support": {
@@ -493,7 +462,6 @@
       "CONTRIBUTORS": 2229,
       "README": 4661,
       "file_exploration": 7,
-      "gtomo": 1,
       "elabftw": 1
     }
   },
@@ -502,8 +470,7 @@
     "sources": {
       "README": 18220,
       "Acknowledgments": 424,
-      "file_exploration": 22,
-      "gtomo": 1
+      "file_exploration": 22
     }
   },
   "download": {

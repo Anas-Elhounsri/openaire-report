@@ -3,110 +3,85 @@
     {
       "source": "GitHub_API",
       "count": 3859779,
-      "percentage": 85.01
+      "percentage": 85.0118
     },
     {
       "source": "file_exploration",
       "count": 336280,
-      "percentage": 7.41
+      "percentage": 7.4066
     },
     {
       "source": "README",
       "count": 278472,
-      "percentage": 6.13
+      "percentage": 6.1334
     },
     {
       "source": "setup.py",
       "count": 19889,
-      "percentage": 0.44
+      "percentage": 0.4381
     },
     {
       "source": "package.json",
       "count": 14456,
-      "percentage": 0.32
+      "percentage": 0.3184
     },
     {
       "source": "DESCRIPTION",
       "count": 13412,
-      "percentage": 0.3
+      "percentage": 0.2954
     },
     {
       "source": "pyproject.toml",
       "count": 11768,
-      "percentage": 0.26
+      "percentage": 0.2592
     },
     {
       "source": "codemeta.json",
       "count": 2455,
-      "percentage": 0.05
+      "percentage": 0.0541
     },
     {
       "source": "bower.json",
       "count": 2052,
-      "percentage": 0.05
+      "percentage": 0.0452
     },
     {
       "source": "pom.xml",
       "count": 647,
-      "percentage": 0.01
+      "percentage": 0.0143
     },
     {
       "source": "Cargo.toml",
       "count": 547,
-      "percentage": 0.01
+      "percentage": 0.012
     },
     {
       "source": "composer.json",
       "count": 313,
-      "percentage": 0.01
+      "percentage": 0.0069
     },
     {
       "source": "Project.toml",
       "count": 131,
-      "percentage": 0.0
+      "percentage": 0.0029
     },
     {
       "source": ".gemspec",
       "count": 74,
-      "percentage": 0.0
+      "percentage": 0.0016
     },
     {
       "source": "Setup.py",
       "count": 7,
-      "percentage": 0.0
+      "percentage": 0.0002
     },
     {
       "source": "Codemeta.json",
       "count": 4,
-      "percentage": 0.0
-    },
-    {
-      "source": "latest",
-      "count": 4,
-      "percentage": 0.0
-    },
-    {
-      "source": "FairMQ",
-      "count": 2,
-      "percentage": 0.0
-    },
-    {
-      "source": "README.",
-      "count": 1,
-      "percentage": 0.0
+      "percentage": 0.0001
     },
     {
       "source": "doc",
-      "count": 1,
-      "percentage": 0.0
-    },
-    {
-      "source": "gtomo",
-      "count": 1,
-      "percentage": 0.0
-    },
-    {
-      "source": "gLike",
       "count": 1,
       "percentage": 0.0
     }
@@ -115,164 +90,139 @@
     {
       "source": "GitHub_API",
       "count": 676809,
-      "percentage": 47.4
+      "percentage": 47.3974
     },
     {
       "source": "README",
       "count": 483142,
-      "percentage": 33.83
+      "percentage": 33.8348
     },
     {
       "source": "software_type_heuristics",
       "count": 98209,
-      "percentage": 6.88
+      "percentage": 6.8776
     },
     {
       "source": "supervised_classification",
       "count": 70210,
-      "percentage": 4.92
+      "percentage": 4.9169
     },
     {
       "source": "setup.py",
       "count": 43573,
-      "percentage": 3.05
+      "percentage": 3.0514
     },
     {
       "source": "DESCRIPTION",
       "count": 15003,
-      "percentage": 1.05
+      "percentage": 1.0507
     },
     {
       "source": "package.json",
       "count": 12615,
-      "percentage": 0.88
+      "percentage": 0.8834
     },
     {
       "source": "pyproject.toml",
       "count": 12222,
-      "percentage": 0.86
+      "percentage": 0.8559
     },
     {
       "source": ".cff",
       "count": 6219,
-      "percentage": 0.44
+      "percentage": 0.4355
     },
     {
       "source": "CITATION",
       "count": 3200,
-      "percentage": 0.22
+      "percentage": 0.2241
     },
     {
       "source": "codemeta.json",
       "count": 2018,
-      "percentage": 0.14
+      "percentage": 0.1413
     },
     {
       "source": "bower.json",
       "count": 1488,
-      "percentage": 0.1
+      "percentage": 0.1042
     },
     {
       "source": "composer.json",
       "count": 996,
-      "percentage": 0.07
+      "percentage": 0.0698
     },
     {
       "source": "Cargo.toml",
       "count": 976,
-      "percentage": 0.07
+      "percentage": 0.0683
     },
     {
       "source": ".bib",
       "count": 706,
-      "percentage": 0.05
+      "percentage": 0.0494
     },
     {
       "source": "file_exploration",
       "count": 447,
-      "percentage": 0.03
+      "percentage": 0.0313
     },
     {
       "source": ".gemspec",
       "count": 72,
-      "percentage": 0.01
+      "percentage": 0.005
     },
     {
       "source": "citation",
       "count": 13,
-      "percentage": 0.0
+      "percentage": 0.0009
     },
     {
       "source": "Setup.py",
       "count": 10,
-      "percentage": 0.0
+      "percentage": 0.0007
     },
     {
       "source": "Citation",
       "count": 8,
-      "percentage": 0.0
+      "percentage": 0.0006
     },
     {
       "source": "Codemeta.json",
       "count": 5,
-      "percentage": 0.0
-    },
-    {
-      "source": "latest",
-      "count": 4,
-      "percentage": 0.0
+      "percentage": 0.0004
     },
     {
       "source": "doc",
       "count": 4,
-      "percentage": 0.0
-    },
-    {
-      "source": "gLike",
-      "count": 2,
-      "percentage": 0.0
-    },
-    {
-      "source": "gtomo",
-      "count": 2,
-      "percentage": 0.0
+      "percentage": 0.0003
     },
     {
       "source": "elabftw",
       "count": 1,
-      "percentage": 0.0
-    },
-    {
-      "source": "README.",
-      "count": 1,
-      "percentage": 0.0
-    },
-    {
-      "source": "FairMQ",
-      "count": 1,
-      "percentage": 0.0
+      "percentage": 0.0001
     }
   ],
   "Packaging Build & Release": [
     {
       "source": "file_exploration",
       "count": 120888,
-      "percentage": 16.33
+      "percentage": 16.3283
     },
     {
       "source": "requirements.txt",
       "count": 117361,
-      "percentage": 15.85
+      "percentage": 15.8519
     },
     {
       "source": "GitHub_API",
       "count": 83274,
-      "percentage": 11.25
+      "percentage": 11.2478
     },
     {
       "source": "README",
       "count": 76482,
-      "percentage": 10.33
+      "percentage": 10.3304
     },
     {
       "source": "pyproject.toml",
@@ -282,42 +232,42 @@
     {
       "source": "setup.py",
       "count": 66930,
-      "percentage": 9.04
+      "percentage": 9.0402
     },
     {
       "source": "package.json",
       "count": 65961,
-      "percentage": 8.91
+      "percentage": 8.9094
     },
     {
       "source": "DESCRIPTION",
       "count": 60510,
-      "percentage": 8.17
+      "percentage": 8.1731
     },
     {
       "source": "pom.xml",
       "count": 37230,
-      "percentage": 5.03
+      "percentage": 5.0287
     },
     {
       "source": "Dockerfile",
       "count": 21635,
-      "percentage": 2.92
+      "percentage": 2.9222
     },
     {
       "source": "Cargo.toml",
       "count": 6235,
-      "percentage": 0.84
+      "percentage": 0.8422
     },
     {
       "source": "docker-compose.yml",
       "count": 4684,
-      "percentage": 0.63
+      "percentage": 0.6327
     },
     {
       "source": "bower.json",
       "count": 4168,
-      "percentage": 0.56
+      "percentage": 0.563
     },
     {
       "source": "composer.json",
@@ -327,249 +277,214 @@
     {
       "source": ".gemspec",
       "count": 1519,
-      "percentage": 0.21
+      "percentage": 0.2052
     },
     {
       "source": "codemeta.json",
       "count": 819,
-      "percentage": 0.11
+      "percentage": 0.1106
     },
     {
       "source": "Project.toml",
       "count": 798,
-      "percentage": 0.11
+      "percentage": 0.1078
     },
     {
       "source": "Setup.py",
       "count": 40,
-      "percentage": 0.01
+      "percentage": 0.0054
     },
     {
       "source": "Package.json",
       "count": 2,
-      "percentage": 0.0
+      "percentage": 0.0003
     },
     {
       "source": "LICENSE",
       "count": 2,
-      "percentage": 0.0
+      "percentage": 0.0003
     },
     {
       "source": "Docker-compose.yml",
       "count": 2,
-      "percentage": 0.0
-    },
-    {
-      "source": "Codemeta.json",
-      "count": 1,
-      "percentage": 0.0
-    },
-    {
-      "source": "latest",
-      "count": 1,
-      "percentage": 0.0
-    },
-    {
-      "source": "FairMQ",
-      "count": 1,
-      "percentage": 0.0
-    },
-    {
-      "source": "gLike",
-      "count": 1,
-      "percentage": 0.0
+      "percentage": 0.0003
     },
     {
       "source": "setUp.py",
       "count": 1,
-      "percentage": 0.0
+      "percentage": 0.0001
     },
     {
       "source": "cargo.toml",
       "count": 1,
-      "percentage": 0.0
+      "percentage": 0.0001
+    },
+    {
+      "source": "Codemeta.json",
+      "count": 1,
+      "percentage": 0.0001
     }
   ],
   "Documentation & User Guidance": [
     {
       "source": "README",
       "count": 389378,
-      "percentage": 41.28
+      "percentage": 41.2774
     },
     {
       "source": "LICENSE",
       "count": 172310,
-      "percentage": 18.27
+      "percentage": 18.2663
     },
     {
       "source": "GitHub_API",
       "count": 164233,
-      "percentage": 17.41
+      "percentage": 17.4101
     },
     {
       "source": ".ipynb",
       "count": 58750,
-      "percentage": 6.23
+      "percentage": 6.228
     },
     {
       "source": "setup.py",
       "count": 35075,
-      "percentage": 3.72
+      "percentage": 3.7182
     },
     {
       "source": ".md",
       "count": 27627,
-      "percentage": 2.93
+      "percentage": 2.9287
     },
     {
       "source": "file_exploration",
       "count": 21267,
-      "percentage": 2.25
+      "percentage": 2.2545
     },
     {
       "source": "DESCRIPTION",
       "count": 19261,
-      "percentage": 2.04
+      "percentage": 2.0418
     },
     {
       "source": "pyproject.toml",
       "count": 19131,
-      "percentage": 2.03
+      "percentage": 2.028
     },
     {
       "source": "package.json",
       "count": 14545,
-      "percentage": 1.54
+      "percentage": 1.5419
     },
     {
       "source": "INSTALL",
       "count": 7167,
-      "percentage": 0.76
+      "percentage": 0.7598
     },
     {
       "source": "AUTHORS",
       "count": 4590,
-      "percentage": 0.49
+      "percentage": 0.4866
     },
     {
       "source": "CONTRIBUTORS",
       "count": 2230,
-      "percentage": 0.24
+      "percentage": 0.2364
     },
     {
       "source": "pom.xml",
       "count": 1678,
-      "percentage": 0.18
+      "percentage": 0.1779
     },
     {
       "source": "Cargo.toml",
       "count": 1388,
-      "percentage": 0.15
+      "percentage": 0.1471
     },
     {
       "source": "codemeta.json",
       "count": 989,
-      "percentage": 0.1
+      "percentage": 0.1048
     },
     {
       "source": "composer.json",
       "count": 971,
-      "percentage": 0.1
+      "percentage": 0.1029
     },
     {
       "source": "bower.json",
       "count": 864,
-      "percentage": 0.09
+      "percentage": 0.0916
     },
     {
       "source": ".txt",
       "count": 863,
-      "percentage": 0.09
+      "percentage": 0.0915
     },
     {
       "source": "Acknowledgments",
       "count": 431,
-      "percentage": 0.05
+      "percentage": 0.0457
     },
     {
       "source": "CONTRIBUTING",
       "count": 244,
-      "percentage": 0.03
+      "percentage": 0.0259
     },
     {
       "source": ".gemspec",
       "count": 123,
-      "percentage": 0.01
+      "percentage": 0.013
     },
     {
       "source": "Project.toml",
       "count": 105,
-      "percentage": 0.01
+      "percentage": 0.0111
     },
     {
       "source": "authors",
       "count": 50,
-      "percentage": 0.01
+      "percentage": 0.0053
     },
     {
       "source": "CODE_OF_CONDUCT",
       "count": 22,
-      "percentage": 0.0
+      "percentage": 0.0023
     },
     {
       "source": "Authors",
       "count": 10,
-      "percentage": 0.0
+      "percentage": 0.0011
     },
     {
       "source": "Setup.py",
       "count": 7,
-      "percentage": 0.0
+      "percentage": 0.0007
     },
     {
       "source": "elabftw",
       "count": 5,
-      "percentage": 0.0
-    },
-    {
-      "source": "latest",
-      "count": 5,
-      "percentage": 0.0
+      "percentage": 0.0005
     },
     {
       "source": "doc",
       "count": 4,
-      "percentage": 0.0
-    },
-    {
-      "source": "FairMQ",
-      "count": 4,
-      "percentage": 0.0
-    },
-    {
-      "source": "gtomo",
-      "count": 3,
-      "percentage": 0.0
-    },
-    {
-      "source": "gLike",
-      "count": 3,
-      "percentage": 0.0
+      "percentage": 0.0004
     },
     {
       "source": "contributing",
       "count": 1,
-      "percentage": 0.0
+      "percentage": 0.0001
     },
     {
       "source": "code_of_conduct",
       "count": 1,
-      "percentage": 0.0
+      "percentage": 0.0001
     },
     {
       "source": "Codemeta.json",
       "count": 1,
-      "percentage": 0.0
+      "percentage": 0.0001
     }
   ]
 }
